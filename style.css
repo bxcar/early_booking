@@ -12609,6 +12609,61 @@ input:focus:-ms-input-placeholder      {text-indent: 500px; transition: text-ind
     height: 100%;
 }*/
 
+.country-choice {
+    background: #fff;
+}
+
+.country-choice .list-wrap ul li span {
+    border: 1px solid #e6519e;
+}
+
+#page .preference .country-choice .list-wrap li .title {
+    height: auto;
+    border-radius: 2px;
+    padding: 10px;
+    padding-left: 0;
+    padding-right: 0;
+}
+#page .preference .country-choice .list-wrap li {
+    width: 200px;
+}
+
+#page .preference .country-choice .list-wrap li:nth-child(1),
+#page .preference .country-choice .list-wrap li:nth-child(2) {
+    margin-right: 100px;
+}
+
+#page .preference .country-choice .list-wrap li {
+    padding-top: 15px;
+}
+
+.preference2 {
+    background: #fff;
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
+.image-mini-country {
+    vertical-align: bottom;
+    margin-right: 10px;
+}
+
+#page .preference .country-choice .head {
+    margin-bottom: 20px;
+}
+
+.image-mini-country-container {
+    width: 20%;
+    border: none !important;
+}
+
+.image-mini-text-container {
+    width: 80%;
+    border: none !important;
+}
+
+
+
 
 @media screen and (max-width: 767px) {
     input[type="text"],
