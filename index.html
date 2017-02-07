@@ -292,6 +292,7 @@
                                                     document.getElementById('country_container_block_4').style.display = 'block';
                                                     document.getElementById('country_container_block_5').style.display = 'block';
                                                     document.getElementById('country_container_block_6').style.display = 'block';
+                                                    $('#button_for_mob').attr('href', '#country_container_block_1');
 
                                                     return true;
                                                 }
@@ -506,7 +507,7 @@
                 <ul>
                     <li class="country-1 country-choice-li-first">
                         <div class="animation-link">
-                            <a class="title" href="#country-container-block-1">
+                            <a class="title" href="#country_container_block_1">
                                 ТУРЦИЯ от 300$
                                 <img class="finger" src="img/cust/countries_images/finger.png">
                             </a>
@@ -514,12 +515,12 @@
                     </li>
                     <li class="country-2 country-choice-li">
                         <div class="animation-link">
-                            <a class="title" href="#country-container-block-2">БОЛАГАРИЯ от 300$</a>
+                            <a class="title" href="#country_container_block_2">БОЛАГАРИЯ от 300$</a>
                         </div>
                     </li>
                     <li class="country-3 country-choice-li">
                         <div class="animation-link">
-                            <a class="title" href="#country-container-block-3">ГРЕЦИЯ от 300$</a>
+                            <a class="title" href="#country_container_block_3">ГРЕЦИЯ от 300$</a>
                         </div>
                     </li>
                 </ul>
@@ -527,19 +528,19 @@
                 <ul>
                     <li class="country-4 country-choice-li">
                         <div class="animation-link">
-                            <a class="title" href="#country-container-block-4">КИПР от 300$</a>
+                            <a class="title" href="#country_container_block_4">КИПР от 300$</a>
                         </div>
                     </li>
 
                     <li class="country-5 country-choice-li">
                         <div class="animation-link">
-                            <a class="title" href="#country-container-block-5">ИСПАНИЯ от 300$</a>
+                            <a class="title" href="#country_container_block_5">ИСПАНИЯ от 300$</a>
                         </div>
                     </li>
 
                     <li class="country-6 country-choice-li">
                         <div class="animation-link">
-                            <a class="title" href="#country-container-block-6">ХОРВАТИЯ от 300$</a>
+                            <a class="title" href="#country_container_block_6">ХОРВАТИЯ от 300$</a>
                         </div>
                     </li>
                 </ul>
@@ -1837,6 +1838,31 @@
         </div>
     </div>
 
+
+    <div class="preference simple-form" id="simple-form-clone" style="display: none;">
+        <div class="form-container" id="form-container-clone">
+            <form class="form-simple"
+                  action="http://coraltravel.kiev.ua/wp-content/themes/sydney/sendmessage_for_lp_mk/sendmessage_lp_join.php"
+                  method="post">
+                <p>
+                    <span style="font-family: 'MyriadPro-Cond', sans-serif; font-size: 25px;">Нужна помощь?</span><br>
+                    <span style="
+                    font-family: 'MyriadPro-Cond', sans-serif;
+                     font-size: 32px;
+                      display: inline-block;
+                      padding-top: 5px;">
+                        Оставьте заявку
+                    </span>
+                </p>
+                <div>
+                    <input type="text" id="name-clone" name="name" placeholder="  Имя" required>
+                    <input type="tel" id="tel-clone" name="phone" placeholder="  Телефон" required>
+                    <!--<input type="email" id="email" name="email" placeholder="  Email">-->
+                    <input type="submit" value="Отправить">
+                </div>
+            </form>
+        </div>
+    </div>
 
     <div class="preference preference-our" style="margin: 40px 0px;">
         <p class="head" style="text-transform: uppercase;">Наши преимущества</p>

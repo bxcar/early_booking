@@ -6802,6 +6802,15 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
         width: 300px !important;
     }
 
+    #simple-form {
+        display: none;
+    }
+
+
+    #simple-form-clone {
+        display: block !important;
+    }
+
 }
 
 .navbar-toggle {
