@@ -265,6 +265,18 @@
 
 /****************************</FOOTER>**************************************/
 
+#select_country_mobile {
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    /*appearance:none;
+    -moz-appearance:none; !* Firefox *!
+    -webkit-appearance:none; !* Safari and Chrome *!*/
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,0.3);
+    background: linear-gradient(to bottom, #ffffff 0%,#e5e5e5 100%) no-repeat right;
+    /*background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAJCAYAAAALpr0TAAAAGXRFW…huEhYW3mphYbEWxBYREdmGLMf4//9/dD9oQOkbyIIAAQYAR28vPtnP7yoAAAAASUVORK5CYII=) !important;*/
+}
+
 .tip-default {
     z-index: 9000;
     text-align: center;
