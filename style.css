@@ -6811,6 +6811,10 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
         display: block !important;
     }
 
+    #button_for_mob_clone {
+        display: block !important;
+        margin: 20px auto;
+    }
 }
 
 .navbar-toggle {

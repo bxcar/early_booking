@@ -1,8 +1,8 @@
 <?php
-$sendto  = 'malanchukdima@mail.ru, mk@makintour.com'; //Адреса, куда будут приходить письма mk@makintour.com
+$sendto = 'malanchukdima@mail.ru'; //Адреса, куда будут приходить письма mk@makintour.com
 
-$name  = trim($_POST['name']);
-$email  = trim($_POST['email']);
+$name = trim($_POST['name']);
+$email = trim($_POST['email']);
 $phone = trim($_POST['phone']);
 $budget = trim($_POST['budget']);
 $comment = trim($_POST['comment']);
@@ -19,31 +19,34 @@ $cnn = trim($_POST['cnn']);
 $form_type = trim($_POST['form_type']);
 $country = trim($_POST['country']);
 
-if(!empty($phone) && isset($phone) && $phone != '+380') {
+if ((!empty($phone) && isset($phone) && $phone != '+380') || (!empty($email) && isset($email))) {
 
 // Формирование заголовка письма
 
-    $subject  = '[Новая заявка - Manager]';
+    $subject = '[Новая заявка - Раннее бронирование]';
     $headers = "MIME-Version: 1.0\r\n";
     $headers .= "Content-Type: text/html;charset=utf-8 \r\n";
 // Формирование тела письма
 
-    $msg  = "<html><body style='font-family:Arial,sans-serif;'>";
-    $msg .= "<h2 style='font-weight:bold;border-bottom:1px dotted #ccc;'>Новая заявка - Лендинг с формой подбора тура</h2>\r\n";
-    if(!empty($name) && isset($name)) {
+    $msg = "<html><body style='font-family:Arial,sans-serif;'>";
+    $msg .= "<h2 style='font-weight:bold;border-bottom:1px dotted #ccc;'>Новая заявка - Лендинг Раннее бронирование</h2>\r\n";
+    if (!empty($name) && isset($name)) {
         $msg .= "<p><strong>Имя:</strong> " . $name . "</p>\r\n";
     }
-    $msg .= "<p><strong>Телефон:</strong> " . $phone . "</p>\r\n";
 
-    if(!empty($email) && isset($email)) {
+    if (!empty($phone) && isset($phone)) {
+        $msg .= "<p><strong>Телефон:</strong> " . $phone . "</p>\r\n";
+    }
+
+    if (!empty($email) && isset($email)) {
         $msg .= "<p><strong>Email:</strong> " . $email . "</p>\r\n";
     }
 
-    if(!empty($budget) && isset($budget)) {
+    if (!empty($budget) && isset($budget)) {
         $msg .= "<p><strong>Бюджет:</strong> " . $budget . "</p>\r\n";
     }
 
-    if(!empty($comment) && isset($comment)) {
+    if (!empty($comment) && isset($comment)) {
         $msg .= "<p><strong>Комментарий:</strong> " . $comment . "</p>\r\n";
     }
 
@@ -55,46 +58,46 @@ if(!empty($phone) && isset($phone) && $phone != '+380') {
         $msg .= "<p><strong>id_pages:</strong> " . $id_pages . "</p>\r\n";
     }*/
 
-    if(!empty($country) && isset($country)) {
+    if (!empty($country) && isset($country)) {
         $msg .= "<p><strong>Страна:</strong> " . $country . "</p>\r\n";
     }
 
-    if(!empty($city) && isset($city)) {
-        $city = str_replace('0,','',$city);
+    if (!empty($city) && isset($city)) {
+        $city = str_replace('0,', '', $city);
         $msg .= "<p><strong>Город вылета:</strong> " . $city . "</p>\r\n";
     }
 
-    if(!empty($city_yandex) && isset($city_yandex)) {
+    if (!empty($city_yandex) && isset($city_yandex)) {
         $msg .= "<p><strong>city_yandex:</strong> " . $city_yandex . "</p>\r\n";
     }
 
-    if(!empty($departure) && isset($departure)) {
+    if (!empty($departure) && isset($departure)) {
         $msg .= "<p><strong>Страна:</strong> " . $departure . "</p>\r\n";
     }
 
-    if(!empty($date) && isset($date)) {
+    if (!empty($date) && isset($date)) {
         $msg .= "<p><strong>Дата вылета:</strong> " . $date . "</p>\r\n";
     }
 
-    if(!empty($nights) && isset($nights)) {
+    if (!empty($nights) && isset($nights)) {
         $msg .= "<p><strong>Количество ночей:</strong> " . $nights . "</p>\r\n";
     }
 
-    if(!empty($adt) && isset($adt)) {
+    if (!empty($adt) && isset($adt)) {
         $msg .= "<p><strong>Количество взрослых:</strong> " . $adt . "</p>\r\n";
     }
 
-    if(!empty($cnn) && isset($cnn )) {
-        $msg .= "<p><strong>Количество детей:</strong> " . $cnn  . "</p>\r\n";
+    if (!empty($cnn) && isset($cnn)) {
+        $msg .= "<p><strong>Количество детей:</strong> " . $cnn . "</p>\r\n";
     }
 
-    if(!empty($form_type) && isset($form_type)) {
+    if (!empty($form_type) && isset($form_type)) {
         $msg .= "<p><strong>Тип формы:</strong> " . $form_type . "</p>\r\n";
     }
 
     $msg .= "</body></html>";
 
-    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    /*if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $curl = curl_init();
         curl_setopt_array($curl, array(
             CURLOPT_RETURNTRANSFER => true,
@@ -123,14 +126,15 @@ if(!empty($phone) && isset($phone) && $phone != '+380') {
         ));
         $resp = curl_exec($curl);
         curl_close($curl);
-    }
+    }*/
     /*."  ".urlencode($p)*/
 
 
 // отправка сообщения
-    if(mail($sendto, $subject, $msg, $headers)) {
+    if (mail($sendto, $subject, $msg, $headers)) {
         header("Location: http://makintour.com/lp/best_offer/thanks.html");
-    } else {
+    }
+    else {
         header("Location: http://makintour.com/lp/best_offer/error.html");
     }
 
@@ -141,19 +145,4 @@ else {
 }
 
 ?>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
