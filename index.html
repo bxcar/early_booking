@@ -253,26 +253,45 @@
                                     <!--<form>-->
                                         <!--onsubmit="siteForms.showFast(this);return false"-->
                                         <div class="item select-item">
-                                            <select name="departure">
-                                                <option selected value="Египет">Турция</option>
-                                                <option value="Австрия">Болгария</option>
-                                                <option value="Беларусь">Греция</option>
-                                                <option value="Бельгия">Кипр</option>
-                                                <option value="Болгария">Испания</option>
-                                                <option value="Венгрия">Хорватия</option>
-                                                <option value="Германия">Египет</option>
-                                                <option value="Голландия">Черногория</option>
+                                            <select id="select_country_mobile" name="departure">
+                                                <option value="country_container_block_1">Турция</option>
+                                                <option value="country_container_block_2">Болгария</option>
+                                                <option value="country_container_block_3">Греция</option>
+                                                <option value="country_container_block_4">Кипр</option>
+                                                <option value="country_container_block_5">Испания</option>
+                                                <option value="country_container_block_6">Хорватия</option>
+                                                <!--<option value="country_container_block_7">Египет</option>
+                                                <option value="country_container_block_8">Черногория</option>-->
                                                 <option value="Все страны">Все страны</option>
                                             </select>
                                         </div>
                                         <div class="item button-item">
                                             <label class="label">&nbsp;</label>
-                                            <button class="yellow-button" onclick="toggle(country_container_block_1)">Подобрать</button>
-                                            <!--<a onclick="toggle(hidden_content)">Ссылочка</a>
-                                            <div id="hidden_content" style="display: none;">Вот он я</div>-->
+                                            <button class="yellow-button" onclick="openbox()">Подобрать</button>
                                             <script>
-                                                function toggle(el) {
-                                                    el.style.display = (el.style.display == 'none') ? '' : 'none'
+                                                /*function toggle(el) {
+                                                 el.style.display = (el.style.display == 'none') ? '' : 'none'
+                                                 }*/
+
+
+                                                function openbox(){
+                                                    document.getElementById('country_container_block_1').style.display = 'none';
+                                                    document.getElementById('country_container_block_2').style.display = 'none';
+                                                    document.getElementById('country_container_block_3').style.display = 'none';
+                                                    document.getElementById('country_container_block_4').style.display = 'none';
+                                                    document.getElementById('country_container_block_5').style.display = 'none';
+                                                    document.getElementById('country_container_block_6').style.display = 'none';
+
+                                                    var e = document.getElementById("select_country_mobile");
+                                                    var id = e.options[e.selectedIndex].value;
+
+                                                    var display = document.getElementById(id).style.display;
+
+                                                    if(display=='block'){
+                                                        document.getElementById(id).style.display='none';
+                                                    }else{
+                                                        document.getElementById(id).style.display='block';
+                                                    }
                                                 }
                                             </script>
                                         </div>
@@ -731,7 +750,7 @@
     </div>
 
 
-    <div id="country-container-block-2" style="padding-top: 1px;">
+    <div id="country_container_block_2" style="padding-top: 1px;">
         <div class="single-countries">
             <div class="single-country">
                 <p class="single-country-title">Болгария</p>
@@ -939,7 +958,7 @@
     </div>
 
 
-    <div id="country-container-block-3" style="padding-top: 1px;">
+    <div id="country_container_block_3" style="padding-top: 1px;">
         <div class="single-countries">
             <div class="single-country">
                 <p class="single-country-title">Греция</p>
@@ -1171,7 +1190,7 @@
         </div>
     </div>
 
-    <div id="country-container-block-4" style="padding-top: 1px;">
+    <div id="country_container_block_4" style="padding-top: 1px;">
         <div class="single-countries">
             <div class="single-country">
                 <p class="single-country-title">КИПР</p>
@@ -1378,7 +1397,7 @@
         </div>
     </div>
 
-    <div id="country-container-block-5" style="padding-top: 1px;">
+    <div id="country_container_block_5" style="padding-top: 1px;">
         <div class="single-countries">
             <div class="single-country">
                 <p class="single-country-title">ИСПАНИЯ</p>
@@ -1585,7 +1604,7 @@
         </div>
     </div>
 
-    <div id="country-container-block-6" style="padding-top: 1px;">
+    <div id="country_container_block_6" style="padding-top: 1px;">
         <div class="single-countries">
             <div class="single-country">
                 <p class="single-country-title">ХОРВАТИЯ</p>

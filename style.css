@@ -6781,12 +6781,12 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
         margin-top: 20px;
     }
 
-    #country-container-block-1,
-    #country-container-block-2,
-    #country-container-block-3,
-    #country-container-block-4,
-    #country-container-block-5,
-    #country-container-block-6 {
+    #country_container_block_1,
+    #country_container_block_2,
+    #country_container_block_3,
+    #country_container_block_4,
+    #country_container_block_5,
+    #country_container_block_6 {
         display: none;
     }
 }
