@@ -211,7 +211,7 @@
                 <li class="phone-2">
                     <!--<a class="btn-default-ico question popup_show"
                        href="javascript:;"><span style="font-size: 18px; line-height: 20px; text-transform: none;">Подберите <br/>мне тур</span></a>-->
-                    <a href="http://makintour.com/podbor_tyra/"target="_blank"  class="btn-default-ico question">
+                    <a href="http://makintour.com/podbor_tyra/" target="_blank" class="btn-default-ico question">
                         <span style="font-size: 18px; line-height: 20px; text-transform: none;">
                             Подберите <br/>мне тур
                         </span>
@@ -251,60 +251,77 @@
                             <div class="search-form">
                                 <div class="inner">
                                     <!--<form>-->
-                                        <!--onsubmit="siteForms.showFast(this);return false"-->
-                                        <div class="item select-item">
-                                            <select id="select_country_mobile" name="departure">
-                                                <option value="country_container_block_1">Турция</option>
-                                                <option value="country_container_block_2">Болгария</option>
-                                                <option value="country_container_block_3">Греция</option>
-                                                <option value="country_container_block_4">Кипр</option>
-                                                <option value="country_container_block_5">Испания</option>
-                                                <option value="country_container_block_6">Хорватия</option>
-                                                <!--<option value="country_container_block_7">Египет</option>
-                                                <option value="country_container_block_8">Черногория</option>-->
-                                                <option value="all_countries_list">Все страны</option>
-                                            </select>
-                                        </div>
-                                        <div class="item button-item">
-                                            <label class="label">&nbsp;</label>
-                                            <button class="yellow-button" onclick="openbox()">Подобрать</button>
-                                            <script>
-                                                /*function toggle(el) {
-                                                 el.style.display = (el.style.display == 'none') ? '' : 'none'
-                                                 }*/
+                                    <!--onsubmit="siteForms.showFast(this);return false"-->
+                                    <div class="item select-item">
+                                        <select id="select_country_mobile" name="departure">
+                                            <option value="country_container_block_1">Турция</option>
+                                            <option value="country_container_block_2">Болгария</option>
+                                            <option value="country_container_block_3">Греция</option>
+                                            <option value="country_container_block_4">Кипр</option>
+                                            <option value="country_container_block_5">Испания</option>
+                                            <option value="country_container_block_6">Хорватия</option>
+                                            <!--<option value="country_container_block_7">Египет</option>
+                                            <option value="country_container_block_8">Черногория</option>-->
+                                            <option value="all_countries_list">Все страны</option>
+                                        </select>
+                                    </div>
+                                    <div class="item button-item">
+                                        <label class="label">&nbsp;</label>
+                                        <button id="button_for_mob" class="yellow-button" onclick="openbox()">
+                                            Подобрать
+                                        </button>
+                                        <script>
+                                            /*function toggle(el) {
+                                             el.style.display = (el.style.display == 'none') ? '' : 'none'
+                                             }*/
 
+                                            function openbox() {
+                                                document.getElementById('country_container_block_1').style.display = 'none';
+                                                document.getElementById('country_container_block_2').style.display = 'none';
+                                                document.getElementById('country_container_block_3').style.display = 'none';
+                                                document.getElementById('country_container_block_4').style.display = 'none';
+                                                document.getElementById('country_container_block_5').style.display = 'none';
+                                                document.getElementById('country_container_block_6').style.display = 'none';
 
-                                                function openbox(){
-                                                    document.getElementById('country_container_block_1').style.display = 'none';
-                                                    document.getElementById('country_container_block_2').style.display = 'none';
-                                                    document.getElementById('country_container_block_3').style.display = 'none';
-                                                    document.getElementById('country_container_block_4').style.display = 'none';
-                                                    document.getElementById('country_container_block_5').style.display = 'none';
-                                                    document.getElementById('country_container_block_6').style.display = 'none';
+                                                var e = document.getElementById("select_country_mobile");
+                                                var id = e.options[e.selectedIndex].value;
+                                                if (id == 'all_countries_list') {
+                                                    document.getElementById('country_container_block_1').style.display = 'block';
+                                                    document.getElementById('country_container_block_2').style.display = 'block';
+                                                    document.getElementById('country_container_block_3').style.display = 'block';
+                                                    document.getElementById('country_container_block_4').style.display = 'block';
+                                                    document.getElementById('country_container_block_5').style.display = 'block';
+                                                    document.getElementById('country_container_block_6').style.display = 'block';
 
-                                                    var e = document.getElementById("select_country_mobile");
-                                                    var id = e.options[e.selectedIndex].value;
-                                                    if(id == 'all_countries_list') {
-                                                        document.getElementById('country_container_block_1').style.display = 'block';
-                                                        document.getElementById('country_container_block_2').style.display = 'block';
-                                                        document.getElementById('country_container_block_3').style.display = 'block';
-                                                        document.getElementById('country_container_block_4').style.display = 'block';
-                                                        document.getElementById('country_container_block_5').style.display = 'block';
-                                                        document.getElementById('country_container_block_6').style.display = 'block';
-
-                                                        return true;
-                                                    }
-
-                                                    var display = document.getElementById(id).style.display;
-
-                                                    if(display=='block'){
-                                                        document.getElementById(id).style.display='none';
-                                                    }else{
-                                                        document.getElementById(id).style.display='block';
-                                                    }
+                                                    return true;
                                                 }
-                                            </script>
-                                        </div>
+
+                                                var display = document.getElementById(id).style.display;
+
+                                                if (display == 'block') {
+                                                    document.getElementById(id).style.display = 'none';
+                                                } else {
+                                                    document.getElementById(id).style.display = 'block';
+                                                }
+                                                $('#button_for_mob').attr('href', '#' + id);
+                                            }
+                                        </script>
+                                        <script>
+                                            $(".yellow-button").click(function () {
+                                                //отменяем стандартную обработку нажатия по ссылке
+                                                event.preventDefault();
+
+                                                //забираем идентификатор бока с атрибута href
+                                                var id = $(this).attr('href'),
+
+                                                //узнаем высоту от начала страницы до блока на который ссылается якорь
+                                                        top = $(id).offset().top;
+
+                                                //анимируем переход на расстояние - top за 700 мс
+                                                $('body,html').animate({scrollTop: top}, 900);
+                                            });
+                                        </script>
+                                    </div>
                                     <!--</form>-->
                                 </div>
                             </div>
@@ -2434,7 +2451,8 @@
                     <p>
                         <a target="_blank" href="http://makintour.com/podbor_tyra/">Подбор тура</a><br>
                         <a target="_blank" href="http://makintour.com/goryashie_tyri/">Горящие туры</a><br>
-                        <a target="_blank" href="http://makintour.com/onlain_bronirovanie_aviabiletov/">Авиабилеты</a><br>
+                        <a target="_blank"
+                           href="http://makintour.com/onlain_bronirovanie_aviabiletov/">Авиабилеты</a><br>
                         <a target="_blank" href="http://makintour.com/zayavka_menedjery/">Заявка менеджеру</a><br>
                         <a target="_blank" href="http://makintour.com/kontakti/">Контакты</a>
                     </p>
