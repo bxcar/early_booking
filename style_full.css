@@ -9588,7 +9588,7 @@ li.question:after {
 #page > .header .menu li.logo a, #page > .header .menu li.logo div {
     display: block;
     width: 240px;
-    height: 55px;
+    height: 54px;
     margin: 0px 0 0 0;
     background: url(img/logo-001.png) 0 0 no-repeat;
     -webkit-transition: all 0.3s ease 0s;
@@ -10761,7 +10761,7 @@ body.modal-open {
     }
 
     #page > .header .menu li.logo div {
-        height: 55px;
+        height: 54px;
         background-size: 100% !important;
     }
 

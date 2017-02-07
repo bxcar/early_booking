@@ -1,5 +1,5 @@
 <?php
-$sendto = 'malanchukdima@mail.ru'; //Адреса, куда будут приходить письма mk@makintour.com
+$sendto = 'malanchukdima@mail.ru, request@makintour.com'; //Адреса, куда будут приходить письма mk@makintour.com
 
 $name = trim($_POST['name']);
 $email = trim($_POST['email']);
@@ -97,7 +97,7 @@ if ((!empty($phone) && isset($phone) && $phone != '+380') || (!empty($email) && 
 
     $msg .= "</body></html>";
 
-    /*if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $curl = curl_init();
         curl_setopt_array($curl, array(
             CURLOPT_RETURNTRANSFER => true,
@@ -105,7 +105,7 @@ if ((!empty($phone) && isset($phone) && $phone != '+380') || (!empty($email) && 
                 'http://api.u-on.ru/du4A1ZlNnyLIr90Af17E/lead/create.json',
             CURLOPT_POST => true,
             CURLOPT_POSTFIELDS =>
-                'source='.urlencode('ОНЛАЙН: Лендінг "Подбор тура с формой"').
+                'source='.urlencode('ОНЛАЙН: Лендінг "Раннее бронирование"').
                 '&u_name='.urlencode($name).
                 '&u_phone='.urlencode($phone).
                 '&u_email='.urlencode($email).
@@ -114,19 +114,12 @@ if ((!empty($phone) && isset($phone) && $phone != '+380') || (!empty($email) && 
                 'Телефон: '.urlencode($phone)."\n".
                 'Email: '.urlencode($email)."\n".
                 'Комментарий:'.urlencode($comment)."\n".
-                'Страна(1): '.urlencode($country)."\n".
-                'Город вылета: '.urlencode($city)."\n".
-                'Страна(2): '.urlencode($departure)."\n".
-                'Дата вылета: '.urlencode($date)."\n".
-                'Количество ночей: '.urlencode($nights)."\n".
-                'Количество взрослых: '.urlencode($adt)."\n".
-                'Количество детей: '.urlencode($cnn)."\n".
                 'Тип формы: '.urlencode($form_type)
 
         ));
         $resp = curl_exec($curl);
         curl_close($curl);
-    }*/
+    }
     /*."  ".urlencode($p)*/
 
 
