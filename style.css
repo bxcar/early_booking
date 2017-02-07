@@ -6770,7 +6770,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
         margin-left: auto;
         margin-right: auto;
         text-align: center;
-
+        display: block;
     }
 
     .footer-block-item:nth-child(2) {
@@ -6779,6 +6779,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
         text-align: center;
         padding-left: 0;
         margin-top: 20px;
+        display: block;
     }
 
     #country_container_block_1,
@@ -6789,6 +6790,18 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
     #country_container_block_6 {
         display: none;
     }
+
+    #page .preference .list-wrap li {
+        background-size: auto !important;
+        height: 160px !important;
+        background-position: 50% 60% !important;
+        display: inline-block !important;
+        margin-right: 20 !important;
+        /*width: auto !important;*/
+        margin: 20px;
+        width: 300px !important;
+    }
+
 }
 
 .navbar-toggle {
@@ -10397,7 +10410,7 @@ body.modal-open {
     }
 
     #page .preference .list-wrap li {
-        background: transparent !important;
+        /*background: transparent !important;*/
     }
 
     #page .preference .list-wrap li {
@@ -10533,7 +10546,7 @@ body.modal-open {
     }
 
     #page .preference .list-wrap li {
-        background: transparent !important;
+        /*background: transparent !important;*/
     }
 
     #page .preference .list-wrap li {
