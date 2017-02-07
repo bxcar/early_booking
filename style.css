@@ -207,6 +207,48 @@
 
 /****************************</TILE>**************************************/
 
+/****************************<FOOTER>**************************************/
+.footer_wrap {
+    width: 980px !important;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 20px;
+}
+
+.footer-block-item {
+    display: inline-block;
+    text-align: left;
+}
+.footer-block-item:nth-child(1) {
+    margin-left: 20px;
+}
+
+.footer-block-item:nth-child(1) p,
+.footer-block-item:nth-child(2) p {
+    color: #707070;
+    font-size: 15px;
+}
+
+.footer-block-item:nth-child(1) p strong{
+    font-size: 22px;
+}
+
+.footer-block-item:nth-child(2) p strong {
+    font-size: 18px;
+}
+
+.footer-block-item:nth-child(1) p {
+    margin-top: 15px;
+}
+
+.footer-block-item:nth-child(2) {
+    width: 210px;
+    margin-right: 0;
+    padding-left: 110px;
+}
+
+/****************************</FOOTER>**************************************/
+
 .tip-default {
     z-index: 9000;
     text-align: center;
@@ -9924,11 +9966,8 @@ li.question:after {
 }
 
 .footer_wrap .footer_inner .copy_line {
-    width: 980px;
-    /*border-top: solid 2px #eaeaea;*/
     min-height: 44px;
     margin: 0 auto;
-    text-align: center;
 }
 
 .footer_wrap .footer_inner.footer_inner .copy_line .socials {
