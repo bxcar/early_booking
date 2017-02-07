@@ -483,7 +483,8 @@
   box-shadow: 0 4px 5px rgba(0, 0, 0, 0.15);
 }
 .chosen-container.chosen-with-drop .chosen-drop {
-  left: 0;
+  /*left: 0;*/
+  left: 35%;
 }
 .chosen-container a {
   cursor: pointer;
@@ -493,7 +494,7 @@
 /* @group Single Chosen */
 .chosen-container-single .chosen-single {
   position: relative;
-  display: block;
+  display: inline-block;
   overflow: hidden;
   padding: 0 0 0 8px;
   height: 23px;
@@ -1012,8 +1013,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
 
 
 
-.chosen-container {height:40px;width:100% !important;margin:0;padding:0;border:0}
-.chosen-container .chosen-single {height:40px;border:0 !important;padding:0;margin:0}
+.chosen-container {height:40px;width:100% !important;margin:0; margin-bottom: 40px; padding:0;border:0}
+.chosen-container .chosen-single {height:40px;border:0 !important;padding:0;margin:0;
+  width: 30% !important;
+  max-width: 300px;
+  min-width: 100px;}
 .chosen-container .chosen-single span {height:40px;font-size:16px;line-height:40px;margin:0 30px 0 12px}
 .chosen-container-single .chosen-single div {width:30px}
 .chosen-container-active.chosen-with-drop .chosen-single {background:#fff !important;-webkit-border-radius:4px 4px 0 0 !important;border-radius:4px 4px 0 0 !important}
@@ -1022,7 +1026,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
 .chosen-container-active .chosen-drop .chosen-results li {padding:10px;margin:0;font-size:15px;white-space:nowrap}
 .chosen-container-active .chosen-drop .chosen-results .highlighted {color:#333;background:#7CD1EF}
 .chosen-container-active .chosen-drop .chosen-results .result-selected {background:#00aeef;color:#333}
-.chosen-container .chosen-drop {width:auto !important;min-width:100%;text-align: left;}
+.chosen-container .chosen-drop {/*width:auto !important;min-width:100%*/;text-align: left; width: 30%;
+  max-width: 300px;
+  min-width: 100px;
+  margin-left: auto;
+  margin-right:auto;}
 
 .ui-datepicker {background:#fff;padding:5px 10px;-webkit-border-radius:0 4px 4px 4px;border-radius:0 4px 4px 4px;-webkit-box-shadow: 0 1px 3px 0 rgba(0,0,0,0.4);box-shadow: 0 1px 3px 0 rgba(0,0,0,0.4)}
 .ui-datepicker-header {padding:;font-size:14px;color:#333;border-bottom:1px solid #ddd}

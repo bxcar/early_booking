@@ -139,6 +139,10 @@
     text-align: left;
 }
 
+.single-country-title {
+    text-transform: uppercase;
+}
+
 .hotel-title {
     margin-top: 5px;
     font-family: 'MyriadPro-Cond', sans-serif;
@@ -9588,6 +9592,17 @@ li.question:after {
 #page .slider-top .text ul {
     display: block;
 }
+
+@media (max-width: 992px) {
+    #page .slider-top .text .chosen-results {
+        display: inline-block;
+        width: 100%;
+    }
+
+}
+
+
+
 
 #page .slider-top .text ul li {
     display: block;
