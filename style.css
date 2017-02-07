@@ -6782,14 +6782,14 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
         display: block;
     }
 
-    #country_container_block_1,
+    /*#country_container_block_1,
     #country_container_block_2,
     #country_container_block_3,
     #country_container_block_4,
     #country_container_block_5,
     #country_container_block_6 {
         display: none;
-    }
+    }*/
 
     #page .preference .list-wrap li {
         background-size: auto !important;
@@ -6811,10 +6811,10 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
         display: block !important;
     }
 
-    #button_for_mob_clone {
+    /*#button_for_mob_clone {
         display: block !important;
         margin: 20px auto;
-    }
+    }*/
 }
 
 .navbar-toggle {

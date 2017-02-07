@@ -13,7 +13,7 @@
           href="style.css"/>
 
 
-    <title>Оставьте заявку</title>
+    <title>Раннее бронирование Лето 2017</title>
 
     <script>(function (w, d, u) {
         w.readyQ = [];
@@ -293,6 +293,7 @@
                                                     document.getElementById('country_container_block_5').style.display = 'block';
                                                     document.getElementById('country_container_block_6').style.display = 'block';
                                                     $('#button_for_mob').attr('href', '#country_container_block_1');
+                                                    $('#button_for_mob_clone').css('display', 'none');
 
                                                     return true;
                                                 }
@@ -305,6 +306,8 @@
                                                     document.getElementById(id).style.display = 'block';
                                                 }
                                                 $('#button_for_mob').attr('href', '#' + id);
+                                                $('#button_for_mob_clone').css('display', 'block');
+                                                $('#button_for_mob_clone').css('margin', '20px auto');
                                             }
                                         </script>
                                         <script>
