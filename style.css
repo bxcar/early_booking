@@ -247,6 +247,18 @@
     padding-left: 110px;
 }
 
+ .copyright {
+    margin-top: 20px;
+    padding: 20px 0;
+    background-color: #dd127b;
+    color: #fff;
+    width: 100%;
+}
+
+.copyright span {
+    font-size: 14px;
+}
+
 /****************************</FOOTER>**************************************/
 
 .tip-default {
