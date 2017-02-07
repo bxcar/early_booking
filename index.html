@@ -262,7 +262,7 @@
                                                 <option value="country_container_block_6">Хорватия</option>
                                                 <!--<option value="country_container_block_7">Египет</option>
                                                 <option value="country_container_block_8">Черногория</option>-->
-                                                <option value="Все страны">Все страны</option>
+                                                <option value="all_countries_list">Все страны</option>
                                             </select>
                                         </div>
                                         <div class="item button-item">
@@ -284,6 +284,16 @@
 
                                                     var e = document.getElementById("select_country_mobile");
                                                     var id = e.options[e.selectedIndex].value;
+                                                    if(id == 'all_countries_list') {
+                                                        document.getElementById('country_container_block_1').style.display = 'block';
+                                                        document.getElementById('country_container_block_2').style.display = 'block';
+                                                        document.getElementById('country_container_block_3').style.display = 'block';
+                                                        document.getElementById('country_container_block_4').style.display = 'block';
+                                                        document.getElementById('country_container_block_5').style.display = 'block';
+                                                        document.getElementById('country_container_block_6').style.display = 'block';
+
+                                                        return true;
+                                                    }
 
                                                     var display = document.getElementById(id).style.display;
 
