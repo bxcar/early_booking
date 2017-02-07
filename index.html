@@ -250,7 +250,8 @@
                             <!--href="http://192.168.0.98/mobile/tours/"-->
                             <div class="search-form">
                                 <div class="inner">
-                                    <form> <!--onsubmit="siteForms.showFast(this);return false"-->
+                                    <!--<form>-->
+                                        <!--onsubmit="siteForms.showFast(this);return false"-->
                                         <div class="item select-item">
                                             <select name="departure">
                                                 <option selected value="Египет">Турция</option>
@@ -266,15 +267,23 @@
                                         </div>
                                         <div class="item button-item">
                                             <label class="label">&nbsp;</label>
-                                            <button class="yellow-button" type="submit">Подобрать</button>
+                                            <button class="yellow-button" onclick="toggle(country_container_block_1)">Подобрать</button>
+                                            <!--<a onclick="toggle(hidden_content)">Ссылочка</a>
+                                            <div id="hidden_content" style="display: none;">Вот он я</div>-->
+                                            <script>
+                                                function toggle(el) {
+                                                    el.style.display = (el.style.display == 'none') ? '' : 'none'
+                                                }
+                                            </script>
                                         </div>
-                                    </form>
+                                    <!--</form>-->
                                 </div>
                             </div>
                         </div> <!--onclick="popup.show('#main-form');"-->
                     </li>
                 </ul>
             </div>
+
             <div class="buttons">
                 <div class="inner">
                     <div class="header">
@@ -514,7 +523,7 @@
         </div>
     </div>
 
-    <div id="country-container-block-1" style="padding-top: 1px;">
+    <div id="country_container_block_1" style="padding-top: 1px;">
         <div class="single-countries">
             <div class="single-country">
                 <p class="single-country-title">ТУРЦИЯ</p>
