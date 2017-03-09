@@ -1,5 +1,5 @@
 <?php
-$sendto = 'malanchukdima@mail.ru, request@makintour.com'; //Адреса, куда будут приходить письма mk@makintour.com
+$sendto = 'mk@makintour.com, malanchukdima@mail.ru, request@makintour.com'; //Адреса, куда будут приходить письма
 
 $name = trim($_POST['name']);
 $email = trim($_POST['email']);
@@ -138,4 +138,7 @@ else {
 }
 
 ?>
+
+
+
 

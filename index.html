@@ -48,8 +48,8 @@
                 //забираем идентификатор бока с атрибута href
                 var id = $(this).attr('href'),
 
-                //узнаем высоту от начала страницы до блока на который ссылается якорь
-                        top = $(id).offset().top;
+                    //узнаем высоту от начала страницы до блока на который ссылается якорь
+                    top = $(id).offset().top;
 
                 //анимируем переход на расстояние - top за 700 мс
                 $('body,html').animate({scrollTop: top}, 900);
@@ -186,6 +186,98 @@
         }
     </script>
 
+    <!--#############################################################-->
+    <!-- GOOGLE ADWORDS -->
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function () {
+                    (i[r].q = i[r].q || []).push(arguments)
+                }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-40557418-1', 'auto');
+        ga('send', 'pageview');
+
+    </script>
+    <!-- //-->
+
+
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+        (function (d, w, c) {
+            (w[c] = w[c] || []).push(function () {
+                try {
+                    w.yaCounter21152362 = new Ya.Metrika({
+                        id: 21152362,
+                        clickmap: true,
+                        trackLinks: true,
+                        accurateTrackBounce: true,
+                        webvisor: true
+                    });
+                } catch (e) {
+                }
+            });
+
+            var n = d.getElementsByTagName("script")[0],
+                s = d.createElement("script"),
+                f = function () {
+                    n.parentNode.insertBefore(s, n);
+                };
+            s.type = "text/javascript";
+            s.async = true;
+            s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+            if (w.opera == "[object Opera]") {
+                d.addEventListener("DOMContentLoaded", f, false);
+            } else {
+                f();
+            }
+        })(document, window, "yandex_metrika_callbacks");
+    </script>
+    <noscript>
+        <div><img src="https://mc.yandex.ru/watch/21152362" style="position:absolute; left:-9999px;" alt=""/></div>
+    </noscript>
+    <!-- /Yandex.Metrika counter -->
+
+    <!-- VK -->
+    <script type="text/javascript">(window.Image ? (new Image()) : document.createElement('img')).src = location.protocol + '//vk.com/rtrg?r=odaI0kbwfJ2CodWIqHQIrWhFZynZZg*NhBc*T4LQpO4D6RJkp9ch4KFvWcb5ZZ1fleGAMaqHs8keju94UJbNzmdsu*QJojd0ZI*UvRtY3pjTBnCs7cnfhzJLDlvDplLVkO6ff5bJy*l6iaxUJAc/FUAFBRwBg1x851PENqS5G2A-&pixel_id=1000015421';</script>
+    <!-- //-->
+
+    <!-- Facebook Pixel Code -->
+    <script>
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq)return;
+            n = f.fbq = function () {
+                n.callMethod ?
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n;
+            n.push = n;
+            n.loaded = !0;
+            n.version = '2.0';
+            n.queue = [];
+            t = b.createElement(e);
+            t.async = !0;
+            t.src = v;
+            s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window,
+            document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '1360732413940824'); // Insert your pixel ID here.
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+                   src="https://www.facebook.com/tr?id=1360732413940824&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- DO NOT MODIFY -->
+    <!-- End Facebook Pixel Code -->
+
     <style>
         .not-hover:hover {
             opacity: 1 !important;
@@ -202,13 +294,14 @@
             <ul class="menu">
                 <li class="logo">
                     <a class="not-hover" target="_blank" href="http://www.makintour.com">
-                        <div style="background-image:url(img/cust/logo.png); margin-left: 1px; background-size: 85%;">
+                        <div style="background-image:url(img/cust/logo.png); background-repeat: no-repeat; margin-left: 1px; background-size: 85%;">
                             &nbsp;</div>
                     </a>
                 </li>
                 <li class="phone-22"></li>
                 <li class="phone-2">
-                    <a href="http://makintour.com/podbor_tyra/" target="_blank" class="btn-default-ico question">
+                    <a onclick="siteForms.showFast(this);return false" href="#" target="_blank"
+                       class="btn-default-ico question">
                         <span style="font-size: 18px; line-height: 20px; text-transform: none;">
                             Подберите <br/>мне тур
                         </span>
@@ -243,11 +336,11 @@
                                     <div class="item select-item">
                                         <select id="select_country_mobile" name="departure">
                                             <option value="country_container_block_1">Турция</option>
-                                            <option value="country_container_block_2">Болгария</option>
-                                            <option value="country_container_block_3">Греция</option>
-                                            <option value="country_container_block_4">Кипр</option>
-                                            <option value="country_container_block_5">Испания</option>
-                                            <option value="country_container_block_6">Хорватия</option>
+                                            <option value="country_container_block_2">Греция</option>
+                                            <option value="country_container_block_3">Кипр</option>
+                                            <option value="country_container_block_4">Испания</option>
+                                            <!--<option value="country_container_block_5">Испания</option>-->
+                                            <!--<option value="country_container_block_6">Хорватия</option>-->
                                             <!--<option value="country_container_block_7">Египет</option>
                                             <option value="country_container_block_8">Черногория</option>-->
                                             <option value="all_countries_list">Все страны</option>
@@ -264,8 +357,8 @@
                                                 document.getElementById('country_container_block_2').style.display = 'none';
                                                 document.getElementById('country_container_block_3').style.display = 'none';
                                                 document.getElementById('country_container_block_4').style.display = 'none';
-                                                document.getElementById('country_container_block_5').style.display = 'none';
-                                                document.getElementById('country_container_block_6').style.display = 'none';
+//                                                document.getElementById('country_container_block_5').style.display = 'none';
+//                                                document.getElementById('country_container_block_6').style.display = 'none';
 
                                                 var e = document.getElementById("select_country_mobile");
                                                 var id = e.options[e.selectedIndex].value;
@@ -274,8 +367,8 @@
                                                     document.getElementById('country_container_block_2').style.display = 'block';
                                                     document.getElementById('country_container_block_3').style.display = 'block';
                                                     document.getElementById('country_container_block_4').style.display = 'block';
-                                                    document.getElementById('country_container_block_5').style.display = 'block';
-                                                    document.getElementById('country_container_block_6').style.display = 'block';
+//                                                    document.getElementById('country_container_block_5').style.display = 'block';
+//                                                    document.getElementById('country_container_block_6').style.display = 'block';
                                                     $('#button_for_mob').attr('href', '#country_container_block_1');
                                                     $('#button_for_mob_clone').css('display', 'none');
 
@@ -302,8 +395,8 @@
                                                 //забираем идентификатор бока с атрибута href
                                                 var id = $(this).attr('href'),
 
-                                                //узнаем высоту от начала страницы до блока на который ссылается якорь
-                                                        top = $(id).offset().top;
+                                                    //узнаем высоту от начала страницы до блока на который ссылается якорь
+                                                    top = $(id).offset().top;
 
                                                 //анимируем переход на расстояние - top за 700 мс
                                                 $('body,html').animate({scrollTop: top}, 900);
@@ -338,35 +431,35 @@
              style="position: absolute; bottom: 0; margin-bottom: 0; display: inline-block; width: 100%;">
     </div>
 
-    <div class="preference">
+    <div class="preference preference-first">
         <p class="head">Преимущества<br> раннего бронирования</p>
         <div class="list-wrap">
             <ul>
                 <li class="p5">
-                    <span class="title">Экономия на покупке тура по акции достигает 40%</span>
+                    <span class="title">Экономия на покупке тура по акции&nbsp;достигает 40%</span>
                     <span class="text"></span>
                 </li>
                 <li class="p6">
-                    <span class="title">Высокий уровень сервиса 24/7<br>&nbsp;</span>
+                    <span class="title">Фиксированный курс<br>&nbsp;</span>
                     <span class="text"></span>
                 </li>
                 <li class="p7">
-                    <span class="title">Индивидуальный подход к&nbsp;клиентам</span>
+                    <span class="title">Лучшие<br>отели</span>
                     <span class="text"></span>
                 </li>
 
                 <li class="p8">
-                    <span class="title">Более 27 000 довольных&nbsp;клиентов</span>
+                    <span class="title">Позаботившись об отдыхе заранее&nbsp;-&nbsp;можно никуда не спешить</span>
                     <span class="text"></span>
                 </li>
 
                 <li class="p9">
-                    <span class="title">Более 27 000 довольных&nbsp;клиентов</span>
+                    <span class="title">Доступность</span>
                     <span class="text"></span>
                 </li>
 
                 <li class="p10">
-                    <span class="title">Более 27 000 довольных&nbsp;клиентов</span>
+                    <span class="title">Большой выбор<br>среди лучших<br>предложений</span>
                     <span class="text"></span>
                 </li>
 
@@ -389,12 +482,12 @@
                     </li>
                     <li class="country-2 country-choice-li">
                         <div class="animation-link">
-                            <a class="title" href="#country_container_block_2">БОЛАГАРИЯ от 300$</a>
+                            <a class="title" href="#country_container_block_2">ГРЕЦИЯ от 300$</a>
                         </div>
                     </li>
                     <li class="country-3 country-choice-li">
                         <div class="animation-link">
-                            <a class="title" href="#country_container_block_3">ГРЕЦИЯ от 300$</a>
+                            <a class="title" href="#country_container_block_3">КИПР от 300$</a>
                         </div>
                     </li>
                 </ul>
@@ -402,33 +495,7 @@
                 <ul>
                     <li class="country-4 country-choice-li">
                         <div class="animation-link">
-                            <a class="title" href="#country_container_block_4">КИПР от 300$</a>
-                        </div>
-                    </li>
-
-                    <li class="country-5 country-choice-li">
-                        <div class="animation-link">
-                            <a class="title" href="#country_container_block_5">ИСПАНИЯ от 300$</a>
-                        </div>
-                    </li>
-
-                    <li class="country-6 country-choice-li">
-                        <div class="animation-link">
-                            <a class="title" href="#country_container_block_6">ХОРВАТИЯ от 300$</a>
-                        </div>
-                    </li>
-                </ul>
-
-                <ul>
-                    <li class="country-7 country-choice-li">
-                        <div class="animation-link">
-                            <a class="title" href="#">ЕГИПЕТ от 300$</a>
-                        </div>
-                    </li>
-
-                    <li class="country-8 country-choice-li">
-                        <div class="animation-link">
-                            <a class="title" href="#">ЧЕРНОГОРИЯ от 300$</a>
+                            <a class="title" href="#country_container_block_4">ИСПАНИЯ от 300$</a>
                         </div>
                     </li>
 
@@ -451,44 +518,7 @@
                     <ul>
                         <li class="tile">
                             <div class="tile-hotel-image">
-                                <img src="img/cust/countries_images/single-countries/turkey/rubi_hotel.jpg">
-                            </div>
-                            <div class="rating">
-                                <img src="img/cust/countries_images/single-countries/common/rate.png">
-                                <img src="img/cust/countries_images/single-countries/common/rate.png">
-                                <img src="img/cust/countries_images/single-countries/common/rate.png">
-                                <img src="img/cust/countries_images/single-countries/common/rate.png">
-                            </div>
-                            <div class="hotel-title">
-                                <p>
-                                    <strong>Club Green Fugla Beach Hv1</strong><br>
-                                    <span>Турция, Аланья</span>
-                                </p>
-                            </div>
-                            <div class="hotel-info">
-                                <div class="hotel-info-left-block">
-                                    <div class="hotel-info-left-block-item">
-                                        <img src="img/cust/countries_images/single-countries/common/eat.png">
-                                        <span>AI</span>
-                                    </div>
-
-                                    <div class="hotel-info-left-block-item">
-                                        <img src="img/cust/countries_images/single-countries/common/plane.png">
-                                        <span>26.05.17</span>
-                                    </div>
-
-                                    <div class="hotel-info-left-block-item">
-                                        <img src="img/cust/countries_images/single-countries/common/nights.png">
-                                        <span>7 ночей</span>
-                                        <p class="hotel-info-right-block-price">647 <span>$</span></p>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-
-                        <li class="tile">
-                            <div class="tile-hotel-image">
-                                <img src="img/cust/countries_images/single-countries/turkey/rubi_hotel.jpg">
+                                <img src="img/cust/countries_images/single-countries/turkey/club_green.jpg">
                             </div>
                             <div class="rating">
                                 <img src="img/cust/countries_images/single-countries/common/rate.png">
@@ -499,7 +529,7 @@
                             </div>
                             <div class="hotel-title">
                                 <p>
-                                    <strong>Rubi Hotel 5*</strong><br>
+                                    <strong>Club Green Fugla Beach</strong><br>
                                     <span>Турция</span>
                                 </p>
                             </div>
@@ -512,13 +542,16 @@
 
                                     <div class="hotel-info-left-block-item">
                                         <img src="img/cust/countries_images/single-countries/common/plane.png">
-                                        <span>07.06.17</span>
+                                        <span>08.06.17</span>
                                     </div>
 
                                     <div class="hotel-info-left-block-item">
                                         <img src="img/cust/countries_images/single-countries/common/nights.png">
-                                        <span>7 ночей</span>
-                                        <p class="hotel-info-right-block-price">478 <span>$</span></p>
+                                        <span>8 дней</span>
+                                        <a class="hotel-info-right-block-price"
+                                           onclick="siteForms.showFast(this);return false" href="#">
+                                            323 <span>$</span>
+                                        </a>
                                     </div>
                                 </div>
                             </div>
@@ -526,7 +559,7 @@
 
                         <li class="tile">
                             <div class="tile-hotel-image">
-                                <img src="img/cust/countries_images/single-countries/turkey/rubi_hotel.jpg">
+                                <img src="img/cust/countries_images/single-countries/turkey/Crystal_Bodrum.jpg">
                             </div>
                             <div class="rating">
                                 <img src="img/cust/countries_images/single-countries/common/rate.png">
@@ -537,7 +570,7 @@
                             </div>
                             <div class="hotel-title">
                                 <p>
-                                    <strong>Rubi Hotel 5*</strong><br>
+                                    <strong>Crystal Bodrum</strong><br>
                                     <span>Турция</span>
                                 </p>
                             </div>
@@ -550,20 +583,24 @@
 
                                     <div class="hotel-info-left-block-item">
                                         <img src="img/cust/countries_images/single-countries/common/plane.png">
-                                        <span>07.06.17</span>
+                                        <span>13.06.17</span>
                                     </div>
 
                                     <div class="hotel-info-left-block-item">
                                         <img src="img/cust/countries_images/single-countries/common/nights.png">
-                                        <span>7 ночей</span>
-                                        <p class="hotel-info-right-block-price">478 <span>$</span></p>
+                                        <span>8 дней</span>
+                                        <a class="hotel-info-right-block-price"
+                                           onclick="siteForms.showFast(this);return false" href="#">
+                                            360 <span>$</span>
+                                        </a>
                                     </div>
                                 </div>
                             </div>
                         </li>
+
                         <li class="tile">
                             <div class="tile-hotel-image">
-                                <img src="img/cust/countries_images/single-countries/turkey/rubi_hotel.jpg">
+                                <img src="img/cust/countries_images/single-countries/turkey/Justiniano_Club.jpg">
                             </div>
                             <div class="rating">
                                 <img src="img/cust/countries_images/single-countries/common/rate.png">
@@ -574,7 +611,7 @@
                             </div>
                             <div class="hotel-title">
                                 <p>
-                                    <strong>Rubi Hotel 5*</strong><br>
+                                    <strong>Justiniano Club Park Conti</strong><br>
                                     <span>Турция</span>
                                 </p>
                             </div>
@@ -587,13 +624,16 @@
 
                                     <div class="hotel-info-left-block-item">
                                         <img src="img/cust/countries_images/single-countries/common/plane.png">
-                                        <span>07.06.17</span>
+                                        <span>02.06.17</span>
                                     </div>
 
                                     <div class="hotel-info-left-block-item">
                                         <img src="img/cust/countries_images/single-countries/common/nights.png">
-                                        <span>7 ночей</span>
-                                        <p class="hotel-info-right-block-price">478 <span>$</span></p>
+                                        <span>8 дней</span>
+                                        <a class="hotel-info-right-block-price"
+                                           onclick="siteForms.showFast(this);return false" href="#">
+                                            408 <span>$</span>
+                                        </a>
                                     </div>
                                 </div>
                             </div>
@@ -601,7 +641,7 @@
 
                         <li class="tile">
                             <div class="tile-hotel-image">
-                                <img src="img/cust/countries_images/single-countries/turkey/rubi_hotel.jpg">
+                                <img src="img/cust/countries_images/single-countries/turkey/Grand_Haber.jpg">
                             </div>
                             <div class="rating">
                                 <img src="img/cust/countries_images/single-countries/common/rate.png">
@@ -612,7 +652,7 @@
                             </div>
                             <div class="hotel-title">
                                 <p>
-                                    <strong>Rubi Hotel 5*</strong><br>
+                                    <strong>Grand Haber</strong><br>
                                     <span>Турция</span>
                                 </p>
                             </div>
@@ -625,22 +665,69 @@
 
                                     <div class="hotel-info-left-block-item">
                                         <img src="img/cust/countries_images/single-countries/common/plane.png">
-                                        <span>07.06.17</span>
+                                        <span>30.05.17</span>
                                     </div>
 
                                     <div class="hotel-info-left-block-item">
                                         <img src="img/cust/countries_images/single-countries/common/nights.png">
-                                        <span>7 ночей</span>
-                                        <p class="hotel-info-right-block-price">478 <span>$</span></p>
+                                        <span>8 дней</span>
+                                        <a class="hotel-info-right-block-price"
+                                           onclick="siteForms.showFast(this);return false" href="#">
+                                            543 <span>$</span>
+                                        </a>
                                     </div>
                                 </div>
                             </div>
                         </li>
 
-                        <li class="tile tile-last">
-                            <a href="#">
-                                <p>Больше туров в&nbsp;Турцию</p>
-                                <img src="img/cust/countries_images/single-countries/common/more_tours.png">
+                        <li class="tile">
+                            <div class="tile-hotel-image">
+                                <img src="img/cust/countries_images/single-countries/turkey/Marti_Mira.jpg">
+                            </div>
+                            <div class="rating">
+                                <img src="img/cust/countries_images/single-countries/common/rate.png">
+                                <img src="img/cust/countries_images/single-countries/common/rate.png">
+                                <img src="img/cust/countries_images/single-countries/common/rate.png">
+                                <img src="img/cust/countries_images/single-countries/common/rate.png">
+                                <img src="img/cust/countries_images/single-countries/common/rate.png">
+                            </div>
+                            <div class="hotel-title">
+                                <p>
+                                    <strong>Marti Mira</strong><br>
+                                    <span>Турция</span>
+                                </p>
+                            </div>
+                            <div class="hotel-info">
+                                <div class="hotel-info-left-block">
+                                    <div class="hotel-info-left-block-item">
+                                        <img src="img/cust/countries_images/single-countries/common/eat.png">
+                                        <span>Все включено</span>
+                                    </div>
+
+                                    <div class="hotel-info-left-block-item">
+                                        <img src="img/cust/countries_images/single-countries/common/plane.png">
+                                        <span>11.06.17</span>
+                                    </div>
+
+                                    <div class="hotel-info-left-block-item">
+                                        <img src="img/cust/countries_images/single-countries/common/nights.png">
+                                        <span>8 дней</span>
+                                        <a class="hotel-info-right-block-price"
+                                           onclick="siteForms.showFast(this);return false" href="#">
+                                            683 <span>$</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="tile tile-last" style="position: relative;">
+                            <a href="http://makintour.com/countries/turkey/"
+                               style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+                                <div style="position: absolute; top: 35%; width: 100%; height: 65%;">
+                                    <p>Больше туров в&nbsp;Турцию</p>
+                                    <img src="img/cust/countries_images/single-countries/common/more_tours.png">
+                                </div>
                             </a>
                         </li>
                     </ul>
@@ -653,250 +740,43 @@
     <div id="country_container_block_2" style="padding-top: 1px;">
         <div class="single-countries">
             <div class="single-country">
-                <p class="single-country-title">Болгария</p>
-                <div class="tiles">
-                    <ul>
-                        <li class="tile">
-                            <div class="tile-hotel-image">
-                                <img src="img/cust/countries_images/single-countries/turkey/rubi_hotel.jpg">
-                            </div>
-                            <div class="rating">
-                                <img src="img/cust/countries_images/single-countries/common/rate.png">
-                                <img src="img/cust/countries_images/single-countries/common/rate.png">
-                                <img src="img/cust/countries_images/single-countries/common/rate.png">
-                                <img src="img/cust/countries_images/single-countries/common/rate.png">
-                                <img src="img/cust/countries_images/single-countries/common/rate.png">
-                            </div>
-                            <div class="hotel-title">
-                                <p>
-                                    <strong>Rubi Hotel 5*</strong><br>
-                                    <span>Турция</span>
-                                </p>
-                            </div>
-                            <div class="hotel-info">
-                                <div class="hotel-info-left-block">
-                                    <div class="hotel-info-left-block-item">
-                                        <img src="img/cust/countries_images/single-countries/common/eat.png">
-                                        <span>Все включено</span>
-                                    </div>
-
-                                    <div class="hotel-info-left-block-item">
-                                        <img src="img/cust/countries_images/single-countries/common/plane.png">
-                                        <span>07.06.17</span>
-                                    </div>
-
-                                    <div class="hotel-info-left-block-item">
-                                        <img src="img/cust/countries_images/single-countries/common/nights.png">
-                                        <span>7 ночей</span>
-                                        <p class="hotel-info-right-block-price">478 <span>$</span></p>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-
-                        <li class="tile">
-                            <div class="tile-hotel-image">
-                                <img src="img/cust/countries_images/single-countries/turkey/rubi_hotel.jpg">
-                            </div>
-                            <div class="rating">
-                                <img src="img/cust/countries_images/single-countries/common/rate.png">
-                                <img src="img/cust/countries_images/single-countries/common/rate.png">
-                                <img src="img/cust/countries_images/single-countries/common/rate.png">
-                                <img src="img/cust/countries_images/single-countries/common/rate.png">
-                                <img src="img/cust/countries_images/single-countries/common/rate.png">
-                            </div>
-                            <div class="hotel-title">
-                                <p>
-                                    <strong>Rubi Hotel 5*</strong><br>
-                                    <span>Турция</span>
-                                </p>
-                            </div>
-                            <div class="hotel-info">
-                                <div class="hotel-info-left-block">
-                                    <div class="hotel-info-left-block-item">
-                                        <img src="img/cust/countries_images/single-countries/common/eat.png">
-                                        <span>Все включено</span>
-                                    </div>
-
-                                    <div class="hotel-info-left-block-item">
-                                        <img src="img/cust/countries_images/single-countries/common/plane.png">
-                                        <span>07.06.17</span>
-                                    </div>
-
-                                    <div class="hotel-info-left-block-item">
-                                        <img src="img/cust/countries_images/single-countries/common/nights.png">
-                                        <span>7 ночей</span>
-                                        <p class="hotel-info-right-block-price">478 <span>$</span></p>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-
-                        <li class="tile">
-                            <div class="tile-hotel-image">
-                                <img src="img/cust/countries_images/single-countries/turkey/rubi_hotel.jpg">
-                            </div>
-                            <div class="rating">
-                                <img src="img/cust/countries_images/single-countries/common/rate.png">
-                                <img src="img/cust/countries_images/single-countries/common/rate.png">
-                                <img src="img/cust/countries_images/single-countries/common/rate.png">
-                                <img src="img/cust/countries_images/single-countries/common/rate.png">
-                                <img src="img/cust/countries_images/single-countries/common/rate.png">
-                            </div>
-                            <div class="hotel-title">
-                                <p>
-                                    <strong>Rubi Hotel 5*</strong><br>
-                                    <span>Турция</span>
-                                </p>
-                            </div>
-                            <div class="hotel-info">
-                                <div class="hotel-info-left-block">
-                                    <div class="hotel-info-left-block-item">
-                                        <img src="img/cust/countries_images/single-countries/common/eat.png">
-                                        <span>Все включено</span>
-                                    </div>
-
-                                    <div class="hotel-info-left-block-item">
-                                        <img src="img/cust/countries_images/single-countries/common/plane.png">
-                                        <span>07.06.17</span>
-                                    </div>
-
-                                    <div class="hotel-info-left-block-item">
-                                        <img src="img/cust/countries_images/single-countries/common/nights.png">
-                                        <span>7 ночей</span>
-                                        <p class="hotel-info-right-block-price">478 <span>$</span></p>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="tile">
-                            <div class="tile-hotel-image">
-                                <img src="img/cust/countries_images/single-countries/turkey/rubi_hotel.jpg">
-                            </div>
-                            <div class="rating">
-                                <img src="img/cust/countries_images/single-countries/common/rate.png">
-                                <img src="img/cust/countries_images/single-countries/common/rate.png">
-                                <img src="img/cust/countries_images/single-countries/common/rate.png">
-                                <img src="img/cust/countries_images/single-countries/common/rate.png">
-                                <img src="img/cust/countries_images/single-countries/common/rate.png">
-                            </div>
-                            <div class="hotel-title">
-                                <p>
-                                    <strong>Rubi Hotel 5*</strong><br>
-                                    <span>Турция</span>
-                                </p>
-                            </div>
-                            <div class="hotel-info">
-                                <div class="hotel-info-left-block">
-                                    <div class="hotel-info-left-block-item">
-                                        <img src="img/cust/countries_images/single-countries/common/eat.png">
-                                        <span>Все включено</span>
-                                    </div>
-
-                                    <div class="hotel-info-left-block-item">
-                                        <img src="img/cust/countries_images/single-countries/common/plane.png">
-                                        <span>07.06.17</span>
-                                    </div>
-
-                                    <div class="hotel-info-left-block-item">
-                                        <img src="img/cust/countries_images/single-countries/common/nights.png">
-                                        <span>7 ночей</span>
-                                        <p class="hotel-info-right-block-price">478 <span>$</span></p>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-
-                        <li class="tile">
-                            <div class="tile-hotel-image">
-                                <img src="img/cust/countries_images/single-countries/turkey/rubi_hotel.jpg">
-                            </div>
-                            <div class="rating">
-                                <img src="img/cust/countries_images/single-countries/common/rate.png">
-                                <img src="img/cust/countries_images/single-countries/common/rate.png">
-                                <img src="img/cust/countries_images/single-countries/common/rate.png">
-                                <img src="img/cust/countries_images/single-countries/common/rate.png">
-                                <img src="img/cust/countries_images/single-countries/common/rate.png">
-                            </div>
-                            <div class="hotel-title">
-                                <p>
-                                    <strong>Rubi Hotel 5*</strong><br>
-                                    <span>Турция</span>
-                                </p>
-                            </div>
-                            <div class="hotel-info">
-                                <div class="hotel-info-left-block">
-                                    <div class="hotel-info-left-block-item">
-                                        <img src="img/cust/countries_images/single-countries/common/eat.png">
-                                        <span>Все включено</span>
-                                    </div>
-
-                                    <div class="hotel-info-left-block-item">
-                                        <img src="img/cust/countries_images/single-countries/common/plane.png">
-                                        <span>07.06.17</span>
-                                    </div>
-
-                                    <div class="hotel-info-left-block-item">
-                                        <img src="img/cust/countries_images/single-countries/common/nights.png">
-                                        <span>7 ночей</span>
-                                        <p class="hotel-info-right-block-price">478 <span>$</span></p>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-
-                        <li class="tile tile-last">
-                            <a href="#">
-                                <p>Больше туров в&nbsp;Турцию</p>
-                                <img src="img/cust/countries_images/single-countries/common/more_tours.png">
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-    <div id="country_container_block_3" style="padding-top: 1px;">
-        <div class="single-countries">
-            <div class="single-country">
                 <p class="single-country-title">Греция</p>
                 <div class="tiles">
                     <ul>
                         <li class="tile">
                             <div class="tile-hotel-image">
-                                <img src="img/cust/countries_images/single-countries/turkey/rubi_hotel.jpg">
+                                <img src="img/cust/countries_images/single-countries/greece/Kri-Kri.jpg">
                             </div>
                             <div class="rating">
-                                <img src="img/cust/countries_images/single-countries/common/rate.png">
-                                <img src="img/cust/countries_images/single-countries/common/rate.png">
                                 <img src="img/cust/countries_images/single-countries/common/rate.png">
                                 <img src="img/cust/countries_images/single-countries/common/rate.png">
                                 <img src="img/cust/countries_images/single-countries/common/rate.png">
                             </div>
                             <div class="hotel-title">
                                 <p>
-                                    <strong>Rubi Hotel 5*</strong><br>
-                                    <span>Турция</span>
+                                    <strong>Kri-Kri Village Holiday</strong><br>
+                                    <span>Греция</span>
                                 </p>
                             </div>
                             <div class="hotel-info">
                                 <div class="hotel-info-left-block">
                                     <div class="hotel-info-left-block-item">
                                         <img src="img/cust/countries_images/single-countries/common/eat.png">
-                                        <span>Все включено</span>
+                                        <span>Завтраки</span>
                                     </div>
 
                                     <div class="hotel-info-left-block-item">
                                         <img src="img/cust/countries_images/single-countries/common/plane.png">
-                                        <span>07.06.17</span>
+                                        <span>12.06.17</span>
                                     </div>
 
                                     <div class="hotel-info-left-block-item">
                                         <img src="img/cust/countries_images/single-countries/common/nights.png">
-                                        <span>7 ночей</span>
-                                        <p class="hotel-info-right-block-price">478 <span>$</span></p>
+                                        <span>8 дней</span>
+                                        <a class="hotel-info-right-block-price"
+                                           onclick="siteForms.showFast(this);return false" href="#">
+                                            315 <span>€</span>
+                                        </a>
                                     </div>
                                 </div>
                             </div>
@@ -904,37 +784,38 @@
 
                         <li class="tile">
                             <div class="tile-hotel-image">
-                                <img src="img/cust/countries_images/single-countries/turkey/rubi_hotel.jpg">
+                                <img src="img/cust/countries_images/single-countries/greece/Kassandra_Bay.jpg">
                             </div>
                             <div class="rating">
-                                <img src="img/cust/countries_images/single-countries/common/rate.png">
-                                <img src="img/cust/countries_images/single-countries/common/rate.png">
                                 <img src="img/cust/countries_images/single-countries/common/rate.png">
                                 <img src="img/cust/countries_images/single-countries/common/rate.png">
                                 <img src="img/cust/countries_images/single-countries/common/rate.png">
                             </div>
                             <div class="hotel-title">
                                 <p>
-                                    <strong>Rubi Hotel 5*</strong><br>
-                                    <span>Турция</span>
+                                    <strong>Kassandra Bay Hotel</strong><br>
+                                    <span>Греция</span>
                                 </p>
                             </div>
                             <div class="hotel-info">
                                 <div class="hotel-info-left-block">
                                     <div class="hotel-info-left-block-item">
                                         <img src="img/cust/countries_images/single-countries/common/eat.png">
-                                        <span>Все включено</span>
+                                        <span>Завтрак+ужин</span>
                                     </div>
 
                                     <div class="hotel-info-left-block-item">
                                         <img src="img/cust/countries_images/single-countries/common/plane.png">
-                                        <span>07.06.17</span>
+                                        <span>24.05.17</span>
                                     </div>
 
                                     <div class="hotel-info-left-block-item">
                                         <img src="img/cust/countries_images/single-countries/common/nights.png">
-                                        <span>7 ночей</span>
-                                        <p class="hotel-info-right-block-price">478 <span>$</span></p>
+                                        <span>8 дней</span>
+                                        <a class="hotel-info-right-block-price"
+                                           onclick="siteForms.showFast(this);return false" href="#">
+                                            317 <span>€</span>
+                                        </a>
                                     </div>
                                 </div>
                             </div>
@@ -942,74 +823,38 @@
 
                         <li class="tile">
                             <div class="tile-hotel-image">
-                                <img src="img/cust/countries_images/single-countries/turkey/rubi_hotel.jpg">
+                                <img src="img/cust/countries_images/single-countries/greece/Eleonora_Boutique.jpg">
                             </div>
                             <div class="rating">
-                                <img src="img/cust/countries_images/single-countries/common/rate.png">
-                                <img src="img/cust/countries_images/single-countries/common/rate.png">
                                 <img src="img/cust/countries_images/single-countries/common/rate.png">
                                 <img src="img/cust/countries_images/single-countries/common/rate.png">
                                 <img src="img/cust/countries_images/single-countries/common/rate.png">
                             </div>
                             <div class="hotel-title">
                                 <p>
-                                    <strong>Rubi Hotel 5*</strong><br>
-                                    <span>Турция</span>
+                                    <strong>Eleonora Boutique Hotel</strong><br>
+                                    <span>Греция</span>
                                 </p>
                             </div>
                             <div class="hotel-info">
                                 <div class="hotel-info-left-block">
                                     <div class="hotel-info-left-block-item">
                                         <img src="img/cust/countries_images/single-countries/common/eat.png">
-                                        <span>Все включено</span>
+                                        <span>Завтраки</span>
                                     </div>
 
                                     <div class="hotel-info-left-block-item">
                                         <img src="img/cust/countries_images/single-countries/common/plane.png">
-                                        <span>07.06.17</span>
+                                        <span>02.06.17</span>
                                     </div>
 
                                     <div class="hotel-info-left-block-item">
                                         <img src="img/cust/countries_images/single-countries/common/nights.png">
-                                        <span>7 ночей</span>
-                                        <p class="hotel-info-right-block-price">478 <span>$</span></p>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="tile">
-                            <div class="tile-hotel-image">
-                                <img src="img/cust/countries_images/single-countries/turkey/rubi_hotel.jpg">
-                            </div>
-                            <div class="rating">
-                                <img src="img/cust/countries_images/single-countries/common/rate.png">
-                                <img src="img/cust/countries_images/single-countries/common/rate.png">
-                                <img src="img/cust/countries_images/single-countries/common/rate.png">
-                                <img src="img/cust/countries_images/single-countries/common/rate.png">
-                                <img src="img/cust/countries_images/single-countries/common/rate.png">
-                            </div>
-                            <div class="hotel-title">
-                                <p>
-                                    <strong>Rubi Hotel 5*</strong><br>
-                                    <span>Турция</span>
-                                </p>
-                            </div>
-                            <div class="hotel-info">
-                                <div class="hotel-info-left-block">
-                                    <div class="hotel-info-left-block-item">
-                                        <img src="img/cust/countries_images/single-countries/common/eat.png">
-                                        <span>Все включено</span>
-                                    </div>
-
-                                    <div class="hotel-info-left-block-item">
-                                        <img src="img/cust/countries_images/single-countries/common/plane.png">
-                                        <span>07.06.17</span>
-                                    </div>
-
-                                    <div class="hotel-info-left-block-item">
-                                        <img src="img/cust/countries_images/single-countries/common/nights.png">
-                                        <span>7 ночей</span>
-                                        <p class="hotel-info-right-block-price">478 <span>$</span></p>
+                                        <span>8 дней</span>
+                                        <a class="hotel-info-right-block-price"
+                                           onclick="siteForms.showFast(this);return false" href="#">
+                                            327 <span>€</span>
+                                        </a>
                                     </div>
                                 </div>
                             </div>
@@ -1017,7 +862,46 @@
 
                         <li class="tile">
                             <div class="tile-hotel-image">
-                                <img src="img/cust/countries_images/single-countries/turkey/rubi_hotel.jpg">
+                                <img src="img/cust/countries_images/single-countries/greece/Sissi_Bay_Hotel.jpg">
+                            </div>
+                            <div class="rating">
+                                <img src="img/cust/countries_images/single-countries/common/rate.png">
+                                <img src="img/cust/countries_images/single-countries/common/rate.png">
+                                <img src="img/cust/countries_images/single-countries/common/rate.png">
+                                <img src="img/cust/countries_images/single-countries/common/rate.png">
+                            </div>
+                            <div class="hotel-title">
+                                <p>
+                                    <strong>Sissi Bay Hotel & Spa</strong><br>
+                                    <span>Греция</span>
+                                </p>
+                            </div>
+                            <div class="hotel-info">
+                                <div class="hotel-info-left-block">
+                                    <div class="hotel-info-left-block-item">
+                                        <img src="img/cust/countries_images/single-countries/common/eat.png">
+                                        <span>Завтраки</span>
+                                    </div>
+
+                                    <div class="hotel-info-left-block-item">
+                                        <img src="img/cust/countries_images/single-countries/common/plane.png">
+                                        <span>16.06.17</span>
+                                    </div>
+
+                                    <div class="hotel-info-left-block-item">
+                                        <img src="img/cust/countries_images/single-countries/common/nights.png">
+                                        <span>8 дней</span>
+                                        <a class="hotel-info-right-block-price"
+                                           onclick="siteForms.showFast(this);return false" href="#">
+                                            394 <span>€</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="tile">
+                            <div class="tile-hotel-image">
+                                <img src="img/cust/countries_images/single-countries/greece/Istion_Club_Resort.jpg">
                             </div>
                             <div class="rating">
                                 <img src="img/cust/countries_images/single-countries/common/rate.png">
@@ -1028,35 +912,41 @@
                             </div>
                             <div class="hotel-title">
                                 <p>
-                                    <strong>Rubi Hotel 5*</strong><br>
-                                    <span>Турция</span>
+                                    <strong>Istion Club Resort & SPA</strong><br>
+                                    <span>Греция</span>
                                 </p>
                             </div>
                             <div class="hotel-info">
                                 <div class="hotel-info-left-block">
                                     <div class="hotel-info-left-block-item">
                                         <img src="img/cust/countries_images/single-countries/common/eat.png">
-                                        <span>Все включено</span>
+                                        <span>Завтрак+ужин</span>
                                     </div>
 
                                     <div class="hotel-info-left-block-item">
                                         <img src="img/cust/countries_images/single-countries/common/plane.png">
-                                        <span>07.06.17</span>
+                                        <span>17.06.17</span>
                                     </div>
 
                                     <div class="hotel-info-left-block-item">
                                         <img src="img/cust/countries_images/single-countries/common/nights.png">
-                                        <span>7 ночей</span>
-                                        <p class="hotel-info-right-block-price">478 <span>$</span></p>
+                                        <span>8 дней</span>
+                                        <a class="hotel-info-right-block-price"
+                                           onclick="siteForms.showFast(this);return false" href="#">
+                                            595 <span>€</span>
+                                        </a>
                                     </div>
                                 </div>
                             </div>
                         </li>
 
-                        <li class="tile tile-last">
-                            <a href="#">
-                                <p>Больше туров в&nbsp;Турцию</p>
-                                <img src="img/cust/countries_images/single-countries/common/more_tours.png">
+                        <li class="tile tile-last" style="position: relative;">
+                            <a href="http://makintour.com/countries/greece/"
+                               style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+                                <div style="position: absolute; top: 35%; width: 100%; height: 65%;">
+                                    <p>Больше туров в&nbsp;Грецию</p>
+                                    <img src="img/cust/countries_images/single-countries/common/more_tours.png">
+                                </div>
                             </a>
                         </li>
                     </ul>
@@ -1065,7 +955,7 @@
         </div>
     </div>
 
-    <div class="preference simple-form" id="simple-form">
+    <div class="preference simple-form" id="simple-form" style="margin-top: 80px;">
         <div class="form-container" id="form-container">
             <form class="form-simple"
                   action="http://coraltravel.kiev.ua/wp-content/themes/sydney/sendmessage_for_lp_mk/sendmessage_early_booking.php"
@@ -1090,45 +980,268 @@
         </div>
     </div>
 
+    <div id="country_container_block_3" style="padding-top: 1px;">
+        <div class="single-countries">
+            <div class="single-country">
+                <p class="single-country-title">Кипр</p>
+                <div class="tiles">
+                    <ul>
+                        <li class="tile">
+                            <div class="tile-hotel-image">
+                                <img src="img/cust/countries_images/single-countries/kipr/Crown_Resort.jpg">
+                            </div>
+                            <div class="rating">
+                                <img src="img/cust/countries_images/single-countries/common/rate.png">
+                                <img src="img/cust/countries_images/single-countries/common/rate.png">
+                                <img src="img/cust/countries_images/single-countries/common/rate.png">
+                            </div>
+                            <div class="hotel-title">
+                                <p>
+                                    <strong>Crown Resort Henipa</strong><br>
+                                    <span>Кипр</span>
+                                </p>
+                            </div>
+                            <div class="hotel-info">
+                                <div class="hotel-info-left-block">
+                                    <div class="hotel-info-left-block-item">
+                                        <img src="img/cust/countries_images/single-countries/common/eat.png">
+                                        <span>Завтраки</span>
+                                    </div>
+
+                                    <div class="hotel-info-left-block-item">
+                                        <img src="img/cust/countries_images/single-countries/common/plane.png">
+                                        <span>17.06.17</span>
+                                    </div>
+
+                                    <div class="hotel-info-left-block-item">
+                                        <img src="img/cust/countries_images/single-countries/common/nights.png">
+                                        <span>7 дней</span>
+                                        <a class="hotel-info-right-block-price"
+                                           onclick="siteForms.showFast(this);return false" href="#">
+                                            318 <span>€</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="tile">
+                            <div class="tile-hotel-image">
+                                <img src="img/cust/countries_images/single-countries/kipr/St_Nicolas_Elegant.jpg">
+                            </div>
+                            <div class="rating">
+                                <img src="img/cust/countries_images/single-countries/common/rate.png">
+                                <img src="img/cust/countries_images/single-countries/common/rate.png">
+                                <img src="img/cust/countries_images/single-countries/common/rate.png">
+                                <img src="img/cust/countries_images/single-countries/common/rate.png">
+                            </div>
+                            <div class="hotel-title">
+                                <p>
+                                    <strong>St Nicolas Elegant Residence</strong><br>
+                                    <span>Кипр</span>
+                                </p>
+                            </div>
+                            <div class="hotel-info">
+                                <div class="hotel-info-left-block">
+                                    <div class="hotel-info-left-block-item">
+                                        <img src="img/cust/countries_images/single-countries/common/eat.png">
+                                        <span>Завтрак+ужин</span>
+                                    </div>
+
+                                    <div class="hotel-info-left-block-item">
+                                        <img src="img/cust/countries_images/single-countries/common/plane.png">
+                                        <span>02.06.17</span>
+                                    </div>
+
+                                    <div class="hotel-info-left-block-item">
+                                        <img src="img/cust/countries_images/single-countries/common/nights.png">
+                                        <span>8 дней</span>
+                                        <a class="hotel-info-right-block-price"
+                                           onclick="siteForms.showFast(this);return false" href="#">
+                                            385 <span>€</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="tile">
+                            <div class="tile-hotel-image">
+                                <img src="img/cust/countries_images/single-countries/kipr/Smartline_Protaras.jpg">
+                            </div>
+                            <div class="rating">
+                                <img src="img/cust/countries_images/single-countries/common/rate.png">
+                                <img src="img/cust/countries_images/single-countries/common/rate.png">
+                                <img src="img/cust/countries_images/single-countries/common/rate.png">
+                                <img src="img/cust/countries_images/single-countries/common/rate.png">
+                            </div>
+                            <div class="hotel-title">
+                                <p>
+                                    <strong>Smartline Protaras</strong><br>
+                                    <span>Кипр</span>
+                                </p>
+                            </div>
+                            <div class="hotel-info">
+                                <div class="hotel-info-left-block">
+                                    <div class="hotel-info-left-block-item">
+                                        <img src="img/cust/countries_images/single-countries/common/eat.png">
+                                        <span>Завтраки</span>
+                                    </div>
+
+                                    <div class="hotel-info-left-block-item">
+                                        <img src="img/cust/countries_images/single-countries/common/plane.png">
+                                        <span>21.06.17</span>
+                                    </div>
+
+                                    <div class="hotel-info-left-block-item">
+                                        <img src="img/cust/countries_images/single-countries/common/nights.png">
+                                        <span>7 дней</span>
+                                        <a class="hotel-info-right-block-price"
+                                           onclick="siteForms.showFast(this);return false" href="#">
+                                            420 <span>€</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="tile">
+                            <div class="tile-hotel-image">
+                                <img src="img/cust/countries_images/single-countries/kipr/Nelia_Gardens.jpg">
+                            </div>
+                            <div class="rating">
+                                <img src="img/cust/countries_images/single-countries/common/rate.png">
+                                <img src="img/cust/countries_images/single-countries/common/rate.png">
+                                <img src="img/cust/countries_images/single-countries/common/rate.png">
+                                <img src="img/cust/countries_images/single-countries/common/rate.png">
+                            </div>
+                            <div class="hotel-title">
+                                <p>
+                                    <strong>Nelia Gardens</strong><br>
+                                    <span>Кипр</span>
+                                </p>
+                            </div>
+                            <div class="hotel-info">
+                                <div class="hotel-info-left-block">
+                                    <div class="hotel-info-left-block-item">
+                                        <img src="img/cust/countries_images/single-countries/common/eat.png">
+                                        <span>Завтраки</span>
+                                    </div>
+
+                                    <div class="hotel-info-left-block-item">
+                                        <img src="img/cust/countries_images/single-countries/common/plane.png">
+                                        <span>04.06.17</span>
+                                    </div>
+
+                                    <div class="hotel-info-left-block-item">
+                                        <img src="img/cust/countries_images/single-countries/common/nights.png">
+                                        <span>8 дней</span>
+                                        <a class="hotel-info-right-block-price"
+                                           onclick="siteForms.showFast(this);return false" href="#">
+                                            441 <span>€</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="tile">
+                            <div class="tile-hotel-image">
+                                <img src="img/cust/countries_images/single-countries/kipr/Constantinos_The.jpg">
+                            </div>
+                            <div class="rating">
+                                <img src="img/cust/countries_images/single-countries/common/rate.png">
+                                <img src="img/cust/countries_images/single-countries/common/rate.png">
+                                <img src="img/cust/countries_images/single-countries/common/rate.png">
+                                <img src="img/cust/countries_images/single-countries/common/rate.png">
+                                <img src="img/cust/countries_images/single-countries/common/rate.png">
+                            </div>
+                            <div class="hotel-title">
+                                <p>
+                                    <strong>Constantinos The Great</strong><br>
+                                    <span>Кипр</span>
+                                </p>
+                            </div>
+                            <div class="hotel-info">
+                                <div class="hotel-info-left-block">
+                                    <div class="hotel-info-left-block-item">
+                                        <img src="img/cust/countries_images/single-countries/common/eat.png">
+                                        <span>Завтрак+ужин</span>
+                                    </div>
+
+                                    <div class="hotel-info-left-block-item">
+                                        <img src="img/cust/countries_images/single-countries/common/plane.png">
+                                        <span>11.06.17</span>
+                                    </div>
+
+                                    <div class="hotel-info-left-block-item">
+                                        <img src="img/cust/countries_images/single-countries/common/nights.png">
+                                        <span>7 дней</span>
+                                        <a class="hotel-info-right-block-price"
+                                           onclick="siteForms.showFast(this);return false" href="#">
+                                            550 <span>€</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="tile tile-last" style="position: relative;">
+                            <a href="http://makintour.com/countries/cyprus/"
+                               style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+                                <div style="position: absolute; top: 35%; width: 100%; height: 65%;">
+                                    <p>Больше туров на&nbsp;Кипр</p>
+                                    <img src="img/cust/countries_images/single-countries/common/more_tours.png">
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
     <div id="country_container_block_4" style="padding-top: 1px;">
         <div class="single-countries">
             <div class="single-country">
-                <p class="single-country-title">КИПР</p>
+                <p class="single-country-title">Испания</p>
                 <div class="tiles">
                     <ul>
                         <li class="tile">
                             <div class="tile-hotel-image">
-                                <img src="img/cust/countries_images/single-countries/turkey/rubi_hotel.jpg">
+                                <img src="img/cust/countries_images/single-countries/spain/H-Top.jpg">
                             </div>
                             <div class="rating">
-                                <img src="img/cust/countries_images/single-countries/common/rate.png">
-                                <img src="img/cust/countries_images/single-countries/common/rate.png">
                                 <img src="img/cust/countries_images/single-countries/common/rate.png">
                                 <img src="img/cust/countries_images/single-countries/common/rate.png">
                                 <img src="img/cust/countries_images/single-countries/common/rate.png">
                             </div>
                             <div class="hotel-title">
                                 <p>
-                                    <strong>Rubi Hotel 5*</strong><br>
-                                    <span>Турция</span>
+                                    <strong>H.Top Gran Casino Royal</strong><br>
+                                    <span>Испания</span>
                                 </p>
                             </div>
                             <div class="hotel-info">
                                 <div class="hotel-info-left-block">
                                     <div class="hotel-info-left-block-item">
                                         <img src="img/cust/countries_images/single-countries/common/eat.png">
-                                        <span>Все включено</span>
+                                        <span>Завтраки</span>
                                     </div>
 
                                     <div class="hotel-info-left-block-item">
                                         <img src="img/cust/countries_images/single-countries/common/plane.png">
-                                        <span>07.06.17</span>
+                                        <span>31.05.2017</span>
                                     </div>
 
                                     <div class="hotel-info-left-block-item">
                                         <img src="img/cust/countries_images/single-countries/common/nights.png">
-                                        <span>7 ночей</span>
-                                        <p class="hotel-info-right-block-price">478 <span>$</span></p>
+                                        <span>8 дней</span>
+                                        <a class="hotel-info-right-block-price"
+                                           onclick="siteForms.showFast(this);return false" href="#">
+                                            310 <span>€</span>
+                                        </a>
                                     </div>
                                 </div>
                             </div>
@@ -1136,37 +1249,38 @@
 
                         <li class="tile">
                             <div class="tile-hotel-image">
-                                <img src="img/cust/countries_images/single-countries/turkey/rubi_hotel.jpg">
+                                <img src="img/cust/countries_images/single-countries/spain/H-Top.jpg">
                             </div>
                             <div class="rating">
-                                <img src="img/cust/countries_images/single-countries/common/rate.png">
-                                <img src="img/cust/countries_images/single-countries/common/rate.png">
                                 <img src="img/cust/countries_images/single-countries/common/rate.png">
                                 <img src="img/cust/countries_images/single-countries/common/rate.png">
                                 <img src="img/cust/countries_images/single-countries/common/rate.png">
                             </div>
                             <div class="hotel-title">
                                 <p>
-                                    <strong>Rubi Hotel 5*</strong><br>
-                                    <span>Турция</span>
+                                    <strong>H-Top Palm Beach</strong><br>
+                                    <span>Испания</span>
                                 </p>
                             </div>
                             <div class="hotel-info">
                                 <div class="hotel-info-left-block">
                                     <div class="hotel-info-left-block-item">
                                         <img src="img/cust/countries_images/single-countries/common/eat.png">
-                                        <span>Все включено</span>
+                                        <span>Завтраки</span>
                                     </div>
 
                                     <div class="hotel-info-left-block-item">
                                         <img src="img/cust/countries_images/single-countries/common/plane.png">
-                                        <span>07.06.17</span>
+                                        <span>21.06.17</span>
                                     </div>
 
                                     <div class="hotel-info-left-block-item">
                                         <img src="img/cust/countries_images/single-countries/common/nights.png">
-                                        <span>7 ночей</span>
-                                        <p class="hotel-info-right-block-price">478 <span>$</span></p>
+                                        <span>7 дней</span>
+                                        <a class="hotel-info-right-block-price"
+                                           onclick="siteForms.showFast(this);return false" href="#">
+                                            371 <span>€</span>
+                                        </a>
                                     </div>
                                 </div>
                             </div>
@@ -1174,74 +1288,38 @@
 
                         <li class="tile">
                             <div class="tile-hotel-image">
-                                <img src="img/cust/countries_images/single-countries/turkey/rubi_hotel.jpg">
+                                <img src="img/cust/countries_images/single-countries/spain/Balmes.jpg">
                             </div>
                             <div class="rating">
-                                <img src="img/cust/countries_images/single-countries/common/rate.png">
-                                <img src="img/cust/countries_images/single-countries/common/rate.png">
                                 <img src="img/cust/countries_images/single-countries/common/rate.png">
                                 <img src="img/cust/countries_images/single-countries/common/rate.png">
                                 <img src="img/cust/countries_images/single-countries/common/rate.png">
                             </div>
                             <div class="hotel-title">
                                 <p>
-                                    <strong>Rubi Hotel 5*</strong><br>
-                                    <span>Турция</span>
+                                    <strong>Balmes</strong><br>
+                                    <span>Испания</span>
                                 </p>
                             </div>
                             <div class="hotel-info">
                                 <div class="hotel-info-left-block">
                                     <div class="hotel-info-left-block-item">
                                         <img src="img/cust/countries_images/single-countries/common/eat.png">
-                                        <span>Все включено</span>
+                                        <span>Завтрак+ужин</span>
                                     </div>
 
                                     <div class="hotel-info-left-block-item">
                                         <img src="img/cust/countries_images/single-countries/common/plane.png">
-                                        <span>07.06.17</span>
+                                        <span>31.05.17</span>
                                     </div>
 
                                     <div class="hotel-info-left-block-item">
                                         <img src="img/cust/countries_images/single-countries/common/nights.png">
-                                        <span>7 ночей</span>
-                                        <p class="hotel-info-right-block-price">478 <span>$</span></p>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="tile">
-                            <div class="tile-hotel-image">
-                                <img src="img/cust/countries_images/single-countries/turkey/rubi_hotel.jpg">
-                            </div>
-                            <div class="rating">
-                                <img src="img/cust/countries_images/single-countries/common/rate.png">
-                                <img src="img/cust/countries_images/single-countries/common/rate.png">
-                                <img src="img/cust/countries_images/single-countries/common/rate.png">
-                                <img src="img/cust/countries_images/single-countries/common/rate.png">
-                                <img src="img/cust/countries_images/single-countries/common/rate.png">
-                            </div>
-                            <div class="hotel-title">
-                                <p>
-                                    <strong>Rubi Hotel 5*</strong><br>
-                                    <span>Турция</span>
-                                </p>
-                            </div>
-                            <div class="hotel-info">
-                                <div class="hotel-info-left-block">
-                                    <div class="hotel-info-left-block-item">
-                                        <img src="img/cust/countries_images/single-countries/common/eat.png">
-                                        <span>Все включено</span>
-                                    </div>
-
-                                    <div class="hotel-info-left-block-item">
-                                        <img src="img/cust/countries_images/single-countries/common/plane.png">
-                                        <span>07.06.17</span>
-                                    </div>
-
-                                    <div class="hotel-info-left-block-item">
-                                        <img src="img/cust/countries_images/single-countries/common/nights.png">
-                                        <span>7 ночей</span>
-                                        <p class="hotel-info-right-block-price">478 <span>$</span></p>
+                                        <span>8 дней</span>
+                                        <a class="hotel-info-right-block-price"
+                                           onclick="siteForms.showFast(this);return false" href="#">
+                                            382 <span>€</span>
+                                        </a>
                                     </div>
                                 </div>
                             </div>
@@ -1249,10 +1327,9 @@
 
                         <li class="tile">
                             <div class="tile-hotel-image">
-                                <img src="img/cust/countries_images/single-countries/turkey/rubi_hotel.jpg">
+                                <img src="img/cust/countries_images/single-countries/spain/H.Top_Amaika.jpg">
                             </div>
                             <div class="rating">
-                                <img src="img/cust/countries_images/single-countries/common/rate.png">
                                 <img src="img/cust/countries_images/single-countries/common/rate.png">
                                 <img src="img/cust/countries_images/single-countries/common/rate.png">
                                 <img src="img/cust/countries_images/single-countries/common/rate.png">
@@ -1260,165 +1337,36 @@
                             </div>
                             <div class="hotel-title">
                                 <p>
-                                    <strong>Rubi Hotel 5*</strong><br>
-                                    <span>Турция</span>
+                                    <strong>H.Top Amaika</strong><br>
+                                    <span>Испания</span>
                                 </p>
                             </div>
                             <div class="hotel-info">
                                 <div class="hotel-info-left-block">
                                     <div class="hotel-info-left-block-item">
                                         <img src="img/cust/countries_images/single-countries/common/eat.png">
-                                        <span>Все включено</span>
+                                        <span>Завтрак+ужин</span>
                                     </div>
 
                                     <div class="hotel-info-left-block-item">
                                         <img src="img/cust/countries_images/single-countries/common/plane.png">
-                                        <span>07.06.17</span>
+                                        <span>02.06.17</span>
                                     </div>
 
                                     <div class="hotel-info-left-block-item">
                                         <img src="img/cust/countries_images/single-countries/common/nights.png">
-                                        <span>7 ночей</span>
-                                        <p class="hotel-info-right-block-price">478 <span>$</span></p>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-
-                        <li class="tile tile-last">
-                            <a href="#">
-                                <p>Больше туров в&nbsp;Турцию</p>
-                                <img src="img/cust/countries_images/single-countries/common/more_tours.png">
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div id="country_container_block_5" style="padding-top: 1px;">
-        <div class="single-countries">
-            <div class="single-country">
-                <p class="single-country-title">ИСПАНИЯ</p>
-                <div class="tiles">
-                    <ul>
-                        <li class="tile">
-                            <div class="tile-hotel-image">
-                                <img src="img/cust/countries_images/single-countries/turkey/rubi_hotel.jpg">
-                            </div>
-                            <div class="rating">
-                                <img src="img/cust/countries_images/single-countries/common/rate.png">
-                                <img src="img/cust/countries_images/single-countries/common/rate.png">
-                                <img src="img/cust/countries_images/single-countries/common/rate.png">
-                                <img src="img/cust/countries_images/single-countries/common/rate.png">
-                                <img src="img/cust/countries_images/single-countries/common/rate.png">
-                            </div>
-                            <div class="hotel-title">
-                                <p>
-                                    <strong>Rubi Hotel 5*</strong><br>
-                                    <span>Турция</span>
-                                </p>
-                            </div>
-                            <div class="hotel-info">
-                                <div class="hotel-info-left-block">
-                                    <div class="hotel-info-left-block-item">
-                                        <img src="img/cust/countries_images/single-countries/common/eat.png">
-                                        <span>Все включено</span>
-                                    </div>
-
-                                    <div class="hotel-info-left-block-item">
-                                        <img src="img/cust/countries_images/single-countries/common/plane.png">
-                                        <span>07.06.17</span>
-                                    </div>
-
-                                    <div class="hotel-info-left-block-item">
-                                        <img src="img/cust/countries_images/single-countries/common/nights.png">
-                                        <span>7 ночей</span>
-                                        <p class="hotel-info-right-block-price">478 <span>$</span></p>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-
-                        <li class="tile">
-                            <div class="tile-hotel-image">
-                                <img src="img/cust/countries_images/single-countries/turkey/rubi_hotel.jpg">
-                            </div>
-                            <div class="rating">
-                                <img src="img/cust/countries_images/single-countries/common/rate.png">
-                                <img src="img/cust/countries_images/single-countries/common/rate.png">
-                                <img src="img/cust/countries_images/single-countries/common/rate.png">
-                                <img src="img/cust/countries_images/single-countries/common/rate.png">
-                                <img src="img/cust/countries_images/single-countries/common/rate.png">
-                            </div>
-                            <div class="hotel-title">
-                                <p>
-                                    <strong>Rubi Hotel 5*</strong><br>
-                                    <span>Турция</span>
-                                </p>
-                            </div>
-                            <div class="hotel-info">
-                                <div class="hotel-info-left-block">
-                                    <div class="hotel-info-left-block-item">
-                                        <img src="img/cust/countries_images/single-countries/common/eat.png">
-                                        <span>Все включено</span>
-                                    </div>
-
-                                    <div class="hotel-info-left-block-item">
-                                        <img src="img/cust/countries_images/single-countries/common/plane.png">
-                                        <span>07.06.17</span>
-                                    </div>
-
-                                    <div class="hotel-info-left-block-item">
-                                        <img src="img/cust/countries_images/single-countries/common/nights.png">
-                                        <span>7 ночей</span>
-                                        <p class="hotel-info-right-block-price">478 <span>$</span></p>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-
-                        <li class="tile">
-                            <div class="tile-hotel-image">
-                                <img src="img/cust/countries_images/single-countries/turkey/rubi_hotel.jpg">
-                            </div>
-                            <div class="rating">
-                                <img src="img/cust/countries_images/single-countries/common/rate.png">
-                                <img src="img/cust/countries_images/single-countries/common/rate.png">
-                                <img src="img/cust/countries_images/single-countries/common/rate.png">
-                                <img src="img/cust/countries_images/single-countries/common/rate.png">
-                                <img src="img/cust/countries_images/single-countries/common/rate.png">
-                            </div>
-                            <div class="hotel-title">
-                                <p>
-                                    <strong>Rubi Hotel 5*</strong><br>
-                                    <span>Турция</span>
-                                </p>
-                            </div>
-                            <div class="hotel-info">
-                                <div class="hotel-info-left-block">
-                                    <div class="hotel-info-left-block-item">
-                                        <img src="img/cust/countries_images/single-countries/common/eat.png">
-                                        <span>Все включено</span>
-                                    </div>
-
-                                    <div class="hotel-info-left-block-item">
-                                        <img src="img/cust/countries_images/single-countries/common/plane.png">
-                                        <span>07.06.17</span>
-                                    </div>
-
-                                    <div class="hotel-info-left-block-item">
-                                        <img src="img/cust/countries_images/single-countries/common/nights.png">
-                                        <span>7 ночей</span>
-                                        <p class="hotel-info-right-block-price">478 <span>$</span></p>
+                                        <span>8 дней</span>
+                                        <a class="hotel-info-right-block-price"
+                                           onclick="siteForms.showFast(this);return false" href="#">
+                                            431 <span>€</span>
+                                        </a>
                                     </div>
                                 </div>
                             </div>
                         </li>
                         <li class="tile">
                             <div class="tile-hotel-image">
-                                <img src="img/cust/countries_images/single-countries/turkey/rubi_hotel.jpg">
+                                <img src="img/cust/countries_images/single-countries/spain/Gran_Hotel_Elba.jpg">
                             </div>
                             <div class="rating">
                                 <img src="img/cust/countries_images/single-countries/common/rate.png">
@@ -1429,280 +1377,41 @@
                             </div>
                             <div class="hotel-title">
                                 <p>
-                                    <strong>Rubi Hotel 5*</strong><br>
-                                    <span>Турция</span>
+                                    <strong>Gran Hotel Elba Estepona</strong><br>
+                                    <span>Испания</span>
                                 </p>
                             </div>
                             <div class="hotel-info">
                                 <div class="hotel-info-left-block">
                                     <div class="hotel-info-left-block-item">
                                         <img src="img/cust/countries_images/single-countries/common/eat.png">
-                                        <span>Все включено</span>
+                                        <span>Завтрак+ужин</span>
                                     </div>
 
                                     <div class="hotel-info-left-block-item">
                                         <img src="img/cust/countries_images/single-countries/common/plane.png">
-                                        <span>07.06.17</span>
+                                        <span>31.05.17</span>
                                     </div>
 
                                     <div class="hotel-info-left-block-item">
                                         <img src="img/cust/countries_images/single-countries/common/nights.png">
-                                        <span>7 ночей</span>
-                                        <p class="hotel-info-right-block-price">478 <span>$</span></p>
+                                        <span>8 дней</span>
+                                        <a class="hotel-info-right-block-price"
+                                           onclick="siteForms.showFast(this);return false" href="#">
+                                            671 <span>€</span>
+                                        </a>
                                     </div>
                                 </div>
                             </div>
                         </li>
 
-                        <li class="tile">
-                            <div class="tile-hotel-image">
-                                <img src="img/cust/countries_images/single-countries/turkey/rubi_hotel.jpg">
-                            </div>
-                            <div class="rating">
-                                <img src="img/cust/countries_images/single-countries/common/rate.png">
-                                <img src="img/cust/countries_images/single-countries/common/rate.png">
-                                <img src="img/cust/countries_images/single-countries/common/rate.png">
-                                <img src="img/cust/countries_images/single-countries/common/rate.png">
-                                <img src="img/cust/countries_images/single-countries/common/rate.png">
-                            </div>
-                            <div class="hotel-title">
-                                <p>
-                                    <strong>Rubi Hotel 5*</strong><br>
-                                    <span>Турция</span>
-                                </p>
-                            </div>
-                            <div class="hotel-info">
-                                <div class="hotel-info-left-block">
-                                    <div class="hotel-info-left-block-item">
-                                        <img src="img/cust/countries_images/single-countries/common/eat.png">
-                                        <span>Все включено</span>
-                                    </div>
-
-                                    <div class="hotel-info-left-block-item">
-                                        <img src="img/cust/countries_images/single-countries/common/plane.png">
-                                        <span>07.06.17</span>
-                                    </div>
-
-                                    <div class="hotel-info-left-block-item">
-                                        <img src="img/cust/countries_images/single-countries/common/nights.png">
-                                        <span>7 ночей</span>
-                                        <p class="hotel-info-right-block-price">478 <span>$</span></p>
-                                    </div>
+                        <li class="tile tile-last" style="position: relative;">
+                            <a href="http://makintour.com/countries/spain/"
+                               style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+                                <div style="position: absolute; top: 35%; width: 100%; height: 65%;">
+                                    <p>Больше туров в&nbsp;Испанию</p>
+                                    <img src="img/cust/countries_images/single-countries/common/more_tours.png">
                                 </div>
-                            </div>
-                        </li>
-
-                        <li class="tile tile-last">
-                            <a href="#">
-                                <p>Больше туров в&nbsp;Турцию</p>
-                                <img src="img/cust/countries_images/single-countries/common/more_tours.png">
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div id="country_container_block_6" style="padding-top: 1px;">
-        <div class="single-countries">
-            <div class="single-country">
-                <p class="single-country-title">ХОРВАТИЯ</p>
-                <div class="tiles">
-                    <ul>
-                        <li class="tile">
-                            <div class="tile-hotel-image">
-                                <img src="img/cust/countries_images/single-countries/turkey/rubi_hotel.jpg">
-                            </div>
-                            <div class="rating">
-                                <img src="img/cust/countries_images/single-countries/common/rate.png">
-                                <img src="img/cust/countries_images/single-countries/common/rate.png">
-                                <img src="img/cust/countries_images/single-countries/common/rate.png">
-                                <img src="img/cust/countries_images/single-countries/common/rate.png">
-                                <img src="img/cust/countries_images/single-countries/common/rate.png">
-                            </div>
-                            <div class="hotel-title">
-                                <p>
-                                    <strong>Rubi Hotel 5*</strong><br>
-                                    <span>Турция</span>
-                                </p>
-                            </div>
-                            <div class="hotel-info">
-                                <div class="hotel-info-left-block">
-                                    <div class="hotel-info-left-block-item">
-                                        <img src="img/cust/countries_images/single-countries/common/eat.png">
-                                        <span>Все включено</span>
-                                    </div>
-
-                                    <div class="hotel-info-left-block-item">
-                                        <img src="img/cust/countries_images/single-countries/common/plane.png">
-                                        <span>07.06.17</span>
-                                    </div>
-
-                                    <div class="hotel-info-left-block-item">
-                                        <img src="img/cust/countries_images/single-countries/common/nights.png">
-                                        <span>7 ночей</span>
-                                        <p class="hotel-info-right-block-price">478 <span>$</span></p>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-
-                        <li class="tile">
-                            <div class="tile-hotel-image">
-                                <img src="img/cust/countries_images/single-countries/turkey/rubi_hotel.jpg">
-                            </div>
-                            <div class="rating">
-                                <img src="img/cust/countries_images/single-countries/common/rate.png">
-                                <img src="img/cust/countries_images/single-countries/common/rate.png">
-                                <img src="img/cust/countries_images/single-countries/common/rate.png">
-                                <img src="img/cust/countries_images/single-countries/common/rate.png">
-                                <img src="img/cust/countries_images/single-countries/common/rate.png">
-                            </div>
-                            <div class="hotel-title">
-                                <p>
-                                    <strong>Rubi Hotel 5*</strong><br>
-                                    <span>Турция</span>
-                                </p>
-                            </div>
-                            <div class="hotel-info">
-                                <div class="hotel-info-left-block">
-                                    <div class="hotel-info-left-block-item">
-                                        <img src="img/cust/countries_images/single-countries/common/eat.png">
-                                        <span>Все включено</span>
-                                    </div>
-
-                                    <div class="hotel-info-left-block-item">
-                                        <img src="img/cust/countries_images/single-countries/common/plane.png">
-                                        <span>07.06.17</span>
-                                    </div>
-
-                                    <div class="hotel-info-left-block-item">
-                                        <img src="img/cust/countries_images/single-countries/common/nights.png">
-                                        <span>7 ночей</span>
-                                        <p class="hotel-info-right-block-price">478 <span>$</span></p>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-
-                        <li class="tile">
-                            <div class="tile-hotel-image">
-                                <img src="img/cust/countries_images/single-countries/turkey/rubi_hotel.jpg">
-                            </div>
-                            <div class="rating">
-                                <img src="img/cust/countries_images/single-countries/common/rate.png">
-                                <img src="img/cust/countries_images/single-countries/common/rate.png">
-                                <img src="img/cust/countries_images/single-countries/common/rate.png">
-                                <img src="img/cust/countries_images/single-countries/common/rate.png">
-                                <img src="img/cust/countries_images/single-countries/common/rate.png">
-                            </div>
-                            <div class="hotel-title">
-                                <p>
-                                    <strong>Rubi Hotel 5*</strong><br>
-                                    <span>Турция</span>
-                                </p>
-                            </div>
-                            <div class="hotel-info">
-                                <div class="hotel-info-left-block">
-                                    <div class="hotel-info-left-block-item">
-                                        <img src="img/cust/countries_images/single-countries/common/eat.png">
-                                        <span>Все включено</span>
-                                    </div>
-
-                                    <div class="hotel-info-left-block-item">
-                                        <img src="img/cust/countries_images/single-countries/common/plane.png">
-                                        <span>07.06.17</span>
-                                    </div>
-
-                                    <div class="hotel-info-left-block-item">
-                                        <img src="img/cust/countries_images/single-countries/common/nights.png">
-                                        <span>7 ночей</span>
-                                        <p class="hotel-info-right-block-price">478 <span>$</span></p>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="tile">
-                            <div class="tile-hotel-image">
-                                <img src="img/cust/countries_images/single-countries/turkey/rubi_hotel.jpg">
-                            </div>
-                            <div class="rating">
-                                <img src="img/cust/countries_images/single-countries/common/rate.png">
-                                <img src="img/cust/countries_images/single-countries/common/rate.png">
-                                <img src="img/cust/countries_images/single-countries/common/rate.png">
-                                <img src="img/cust/countries_images/single-countries/common/rate.png">
-                                <img src="img/cust/countries_images/single-countries/common/rate.png">
-                            </div>
-                            <div class="hotel-title">
-                                <p>
-                                    <strong>Rubi Hotel 5*</strong><br>
-                                    <span>Турция</span>
-                                </p>
-                            </div>
-                            <div class="hotel-info">
-                                <div class="hotel-info-left-block">
-                                    <div class="hotel-info-left-block-item">
-                                        <img src="img/cust/countries_images/single-countries/common/eat.png">
-                                        <span>Все включено</span>
-                                    </div>
-
-                                    <div class="hotel-info-left-block-item">
-                                        <img src="img/cust/countries_images/single-countries/common/plane.png">
-                                        <span>07.06.17</span>
-                                    </div>
-
-                                    <div class="hotel-info-left-block-item">
-                                        <img src="img/cust/countries_images/single-countries/common/nights.png">
-                                        <span>7 ночей</span>
-                                        <p class="hotel-info-right-block-price">478 <span>$</span></p>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-
-                        <li class="tile">
-                            <div class="tile-hotel-image">
-                                <img src="img/cust/countries_images/single-countries/turkey/rubi_hotel.jpg">
-                            </div>
-                            <div class="rating">
-                                <img src="img/cust/countries_images/single-countries/common/rate.png">
-                                <img src="img/cust/countries_images/single-countries/common/rate.png">
-                                <img src="img/cust/countries_images/single-countries/common/rate.png">
-                                <img src="img/cust/countries_images/single-countries/common/rate.png">
-                                <img src="img/cust/countries_images/single-countries/common/rate.png">
-                            </div>
-                            <div class="hotel-title">
-                                <p>
-                                    <strong>Rubi Hotel 5*</strong><br>
-                                    <span>Турция</span>
-                                </p>
-                            </div>
-                            <div class="hotel-info">
-                                <div class="hotel-info-left-block">
-                                    <div class="hotel-info-left-block-item">
-                                        <img src="img/cust/countries_images/single-countries/common/eat.png">
-                                        <span>Все включено</span>
-                                    </div>
-
-                                    <div class="hotel-info-left-block-item">
-                                        <img src="img/cust/countries_images/single-countries/common/plane.png">
-                                        <span>07.06.17</span>
-                                    </div>
-
-                                    <div class="hotel-info-left-block-item">
-                                        <img src="img/cust/countries_images/single-countries/common/nights.png">
-                                        <span>7 ночей</span>
-                                        <p class="hotel-info-right-block-price">478 <span>$</span></p>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-
-                        <li class="tile tile-last">
-                            <a href="#">
-                                <p>Больше туров в&nbsp;Турцию</p>
-                                <img src="img/cust/countries_images/single-countries/common/more_tours.png">
                             </a>
                         </li>
                     </ul>
@@ -1752,20 +1461,20 @@
         <div class="list-wrap">
             <ul>
                 <li class="p5">
-                    <span class="title" style="text-transform: uppercase;">Огромнейший выбор горящих туров</span>
+                    <span class="title" style="text-transform: uppercase;">Огромнейший<br>выбор<br>горящих туров</span>
                     <span class="text"></span>
                 </li>
                 <li class="p6">
-                    <span class="title" style="text-transform: uppercase;">Высокий уровень сервиса 24/7<br>&nbsp;</span>
+                    <span class="title" style="text-transform: uppercase;">Высокий уровень<br>сервиса<br>24/7<br>&nbsp;</span>
                     <span class="text"></span>
                 </li>
                 <li class="p7">
-                    <span class="title" style="text-transform: uppercase;">Гарантия лучшей цены</span>
+                    <span class="title" style="text-transform: uppercase;">Гарантия<br>лучшей<br>цены</span>
                     <span class="text"></span>
                 </li>
 
                 <li class="p8">
-                    <span class="title" style="text-transform: uppercase;">Более 27 000 довольных&nbsp;клиентов</span>
+                    <span class="title" style="text-transform: uppercase;">Более27 000<br>довольных<br>клиентов</span>
                     <span class="text"></span>
                 </li>
             </ul>
@@ -2135,7 +1844,7 @@
                         <div class="ico ico6"></div>
                         Ваше имя:</label>
                     <div class="input-place">
-                        <input name="name" type="text" class="input" required>
+                        <input placeholder="Ваше имя" name="name" type="text" class="input p-f-inp" required>
                     </div>
                 </div>
                 <div class="item" data-name="all">
@@ -2156,7 +1865,7 @@
                         <div class="ico ico8"></div>
                         E-mail:</label>
                     <div class="input-place">
-                        <input name="email" type="email" class="input"/>
+                        <input placeholder="E-mail" name="email" type="email" class="input p-f-inp"/>
                         <!--<label class="subscribe"><input class="pseudo-checkbox-init" type="checkbox" name="subscribe" value="Y" checked /> Подписаться на лучшие предложения</label>-->
                     </div>
                 </div>
@@ -2166,7 +1875,7 @@
                         <div class="ico ico9"></div>
                         Бюджет:</label>
                     <div class="input-place">
-                        <input name="budget" type="text" class="input"/>
+                        <input placeholder="Бюджет" name="budget" type="text" class="input p-f-inp"/>
                     </div>
                 </div>
 
